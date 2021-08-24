@@ -1,5 +1,5 @@
-import React from "react";
-import ColorModeToggle from "../components/ColorModeToggle";
+import React from 'react';
+import ColorModeToggle from '../components/ColorModeToggle';
 
 const IndexPage = () => {
   return (
