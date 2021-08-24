@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Matheus Gaspar - Web dev.",
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-theme-ui"],
 };
