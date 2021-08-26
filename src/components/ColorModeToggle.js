@@ -53,7 +53,7 @@ function ColorModeToggle() {
             isDark ? 'none' : `inset 8px -8px 0px 0px ${t.colors.toggleIcon}`,
 
           '&:before': {
-            content: '',
+            content: '""',
             position: 'absolute',
             right: '-9px',
             top: '-9px',
@@ -66,7 +66,7 @@ function ColorModeToggle() {
             transition: 'transform 0.45s ease',
           },
           '&:after': {
-            content: '',
+            content: '""',
             width: '8px',
             height: '8px',
             borderRadius: '50%',

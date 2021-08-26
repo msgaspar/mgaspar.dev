@@ -1,8 +1,9 @@
-import { merge } from 'theme-ui';
 import { tailwind } from '@theme-ui/presets';
 
-const theme = merge(tailwind, {
+const theme = {
+  ...tailwind,
   colors: {
+    ...tailwind.colors,
     toggleIcon: tailwind.colors.gray[8],
     modes: {
       dark: {
@@ -17,6 +18,10 @@ const theme = merge(tailwind, {
       },
     },
   },
-});
+  fonts: {
+    ...tailwind.fonts,
+    quicksand: `'Quicksand', 'sans-serif'`,
+  },
+};
 
 export default theme;
