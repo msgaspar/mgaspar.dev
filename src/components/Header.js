@@ -10,6 +10,7 @@ function Header() {
         justifyContent: 'center',
         height: '20',
         width: 'full',
+        flexShrink: 0,
       }}
     >
       <div
@@ -18,6 +19,7 @@ function Header() {
           alignItems: 'center',
           justifyContent: 'space-between',
           width: 'full',
+          px: 2,
           maxWidth: t => t.breakpoints[1],
         }}
       >

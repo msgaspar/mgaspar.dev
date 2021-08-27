@@ -8,7 +8,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Quicksand`, `quicksand\:400,500,700`],
+        fonts: [
+          `quicksand\:400,500,700`,
+          `Signika:300`,
+          `Catamaran:wght@100;200;300;400`,
+          `Nunito+Sans:wght@300;400`,
+        ],
         display: 'swap',
       },
     },
