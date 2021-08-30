@@ -4,8 +4,7 @@ import Header from '../components/Header';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { keyframes } from '@emotion/react';
-import img from '../images/profilePhoto.jpg';
-import { auto } from 'async';
+import SocialLinksBar from '../components/SocialLinksBar';
 
 const morph = keyframes({
   '0%': {
@@ -90,7 +89,7 @@ const IndexPage = () => {
                 m: 0,
               }}
             >
-              Hi! My name is Matheus 👋
+              Hi! I'm Matheus
             </h1>
             <p>
               I'm a 29-year-old engineer from Brazil, taking the first steps in
@@ -124,6 +123,7 @@ const IndexPage = () => {
               alt="A photo of Matheus"
               width={150}
               placeholder="blurred"
+              draggable="false"
               sx={{
                 flexShrink: 0,
                 ml: 4,
