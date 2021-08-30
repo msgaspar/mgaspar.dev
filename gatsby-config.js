@@ -15,7 +15,7 @@ module.exports = {
           `quicksand\:400,500,700`,
           `Signika:300,400`,
           `Catamaran:wght@100;200;300;400`,
-          `Nunito+Sans:wght@300;400`,
+          `Nunito+Sans:400,500,600,700`,
         ],
         display: 'swap',
       },

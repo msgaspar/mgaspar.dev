@@ -4,7 +4,7 @@ const theme = {
   ...tailwind,
   colors: {
     ...tailwind.colors,
-    toggleIcon: tailwind.colors.gray[8],
+    toggleIcon: tailwind.colors.gray[5],
     modes: {
       dark: {
         text: tailwind.colors.gray[4],

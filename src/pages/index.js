@@ -43,12 +43,13 @@ const IndexPage = () => {
             alignItems: 'flex-end',
             p: 2,
             flexShrink: 0,
+            mr: 2,
 
             '> a': {
               textDecoration: 'none',
               color: t => t.colors.gray[6],
               fontFamily: t => t.fonts.quicksand,
-              fontSize: t => t.fontSizes[0],
+              fontSize: t => t.fontSizes[1],
               fontWeight: '500',
 
               '& + a': {
@@ -74,7 +75,7 @@ const IndexPage = () => {
               // fontFamily: 'Source+Sans+Pro',
               fontWeight: '300',
               // color: t => t.colors.gray[7],
-              fontSize: t => t.fontSizes[1],
+              fontSize: t => t.fontSizes[2],
             },
           }}
         >
@@ -84,13 +85,51 @@ const IndexPage = () => {
                 fontFamily: 'Nunito+Sans',
                 letterSpacing: -0.5,
                 color: t => t.colors.gray[9],
-                fontWeight: '500',
-                fontSize: t => t.fontSizes[3],
+                fontWeight: '600',
+                fontSize: t => t.fontSizes[5],
                 m: 0,
               }}
             >
               Hi! I'm Matheus
             </h1>
+            {/* <div
+                sx={{
+                  position: 'relative',
+                  mt: '2',
+                }}
+              >
+                <StaticImage
+                  src="../images/profilePhoto.jpg"
+                  layout="fixed"
+                  alt="A photo of Matheus"
+                  width={100}
+                  placeholder="blurred"
+                  draggable="false"
+                  sx={{
+                    flexShrink: 0,
+                    ml: 4,
+                    mt: 3,
+                    animation: `${morph} 16s ease-in-out infinite`,
+                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                    transition: 'all 1s ease-in-out',
+                  }}
+                />
+                <div
+                  sx={{
+                    position: 'absolute',
+                    top: '16px',
+                    right: '-10px',
+                    background:
+                      'linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%)',
+                    animation: `${morph} 16s ease-in-out infinite`,
+                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+                    transition: 'all 1s ease-in-out',
+                    zIndex: -1,
+                    width: '100px',
+                    height: '180px',
+                  }}
+                ></div>
+              </div> */}
             <p>
               I'm a 29-year-old engineer from Brazil, taking the first steps in
               my career as a software developer. Currently, I'm studying front
@@ -112,42 +151,6 @@ const IndexPage = () => {
               amazing journey.
             </p>
           </section>
-          <div
-            sx={{
-              position: 'relative',
-            }}
-          >
-            <StaticImage
-              src="../images/profilePhoto.jpg"
-              layout="fixed"
-              alt="A photo of Matheus"
-              width={150}
-              placeholder="blurred"
-              draggable="false"
-              sx={{
-                flexShrink: 0,
-                ml: 4,
-                mt: 3,
-                animation: `${morph} 16s ease-in-out infinite`,
-                borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-                transition: 'all 1s ease-in-out',
-              }}
-            />
-            <div
-              sx={{
-                position: 'absolute',
-                top: '16px',
-                right: '-10px',
-                background: 'linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%)',
-                animation: `${morph} 16s ease-in-out infinite`,
-                borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-                transition: 'all 1s ease-in-out',
-                zIndex: -1,
-                width: '160px',
-                height: '300px',
-              }}
-            ></div>
-          </div>
         </main>
       </div>
     </div>
