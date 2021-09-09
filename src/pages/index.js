@@ -36,32 +36,6 @@ const IndexPage = () => {
           maxWidth: t => t.breakpoints[1],
         }}
       >
-        <nav
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            p: 2,
-            flexShrink: 0,
-            mr: 2,
-
-            '> a': {
-              textDecoration: 'none',
-              color: t => t.colors.gray[6],
-              fontFamily: 'Nunito+Sans',
-              fontSize: t => t.fontSizes[1],
-              fontWeight: '500',
-
-              '& + a': {
-                mt: '4px',
-              },
-            },
-          }}
-        >
-          <Link to="/">about me</Link>
-          <Link to="/">projects</Link>
-          <Link to="/">contact</Link>
-        </nav>
         <main
           sx={{
             flexGrow: 1,
@@ -154,6 +128,32 @@ const IndexPage = () => {
             </p>
           </section>
         </main>
+        <nav
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            p: 2,
+            flexShrink: 0,
+            mr: 2,
+
+            '> a': {
+              textDecoration: 'none',
+              color: t => t.colors.gray[6],
+              fontFamily: 'Nunito+Sans',
+              fontSize: t => t.fontSizes[1],
+              fontWeight: '500',
+
+              '& + a': {
+                mt: '4px',
+              },
+            },
+          }}
+        >
+          <Link to="/">about me</Link>
+          <Link to="/">projects</Link>
+          <Link to="/">contact</Link>
+        </nav>
       </div>
     </div>
   );
