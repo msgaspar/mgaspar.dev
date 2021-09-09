@@ -41,8 +41,8 @@ export default Header;
 const headerLayout = {
   display: 'flex',
   justifyContent: 'center',
-  height: '32',
-  width: 'full',
+  width: '100%',
+  height: t => t.space[5],
   flexShrink: 0,
 };
 
@@ -50,8 +50,7 @@ const headerContainer = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  width: 'full',
-  px: 2,
+  width: '100%',
   maxWidth: t => t.breakpoints[1],
 };
 
@@ -60,24 +59,24 @@ const mainHeading = {
   alignItems: 'center',
 
   h1: {
-    fontFamily: 'Nunito+Sans',
+    fontFamily: t => t.fonts.heading,
     fontSize: t => t.fontSizes[1],
-    // letterSpacing: '-0.2px',
-    fontWeight: '700',
+    letterSpacing: '-0.2px',
+    fontWeight: t => t.fontWeights.bold,
     color: t => t.colors.gray[9],
 
     '> span': {
       color: t => t.colors.gray[5],
-      fontWeight: 500,
+      fontWeight: t => t.fontWeights.regular,
     },
 
     '&:after': {
       content: '""',
       display: 'inline-block',
       verticalAlign: 'middle',
-      mx: 2,
-      width: 3,
-      height: '2px',
+      mx: t => t.space[2],
+      width: t => t.space[2],
+      height: '1px',
       backgroundColor: t => t.colors.gray[4],
     },
   },

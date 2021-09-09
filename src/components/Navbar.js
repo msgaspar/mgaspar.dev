@@ -9,15 +9,15 @@ function Navbar() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
-        p: 2,
+        p: t => t.space[2],
         flexShrink: 0,
 
         '> a': {
           textDecoration: 'none',
           color: t => t.colors.gray[6],
-          fontFamily: 'Nunito+Sans',
+          fontFamily: t => t.fonts.heading,
           fontSize: t => t.fontSizes[1],
-          fontWeight: '500',
+          fontWeight: t => t.fontWeights.regular,
 
           '& + a': {
             mt: '4px',

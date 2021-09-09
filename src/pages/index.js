@@ -45,12 +45,12 @@ const MainContainer = ({ children }) => (
     sx={{
       flex: 1,
       header: {
-        mt: 4,
-        mb: 5,
+        mt: t => t.space[4],
+        mb: t => t.space[5],
       },
       p: {
-        fontFamily: 'Signika',
-        fontWeight: '300',
+        fontFamily: t => t.fonts.body,
+        fontWeight: t => t.fontWeights.light,
         fontSize: t => t.fontSizes[2],
         maxWidth: '600px',
         mx: 'auto',
@@ -101,10 +101,10 @@ const MainHeader = () => (
     />
     <h1
       sx={{
-        fontFamily: 'Nunito+Sans',
+        fontFamily: t => t.fonts.heading,
         letterSpacing: -0.5,
         color: t => t.colors.gray[9],
-        fontWeight: '600',
+        fontWeight: t => t.fontWeights.extra,
         fontSize: t => t.fontSizes[6],
         m: 0,
         transform: 'translateY(10%) translateX(5%)',

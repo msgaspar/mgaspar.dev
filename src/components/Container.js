@@ -10,7 +10,7 @@ function Container({ children }) {
         sx={{
           flexGrow: 1,
           display: 'flex',
-          width: 'full',
+          width: '100%',
           maxWidth: t => t.breakpoints[1],
         }}
       >
@@ -26,7 +26,7 @@ const ContainerLayout = ({ children }) => (
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      width: 'full',
+      width: '100%',
       minHeight: '100vh',
     }}
   >
