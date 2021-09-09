@@ -48,7 +48,7 @@ const IndexPage = () => {
             '> a': {
               textDecoration: 'none',
               color: t => t.colors.gray[6],
-              fontFamily: t => t.fonts.quicksand,
+              fontFamily: 'Nunito+Sans',
               fontSize: t => t.fontSizes[1],
               fontWeight: '500',
 
@@ -76,60 +76,62 @@ const IndexPage = () => {
               fontWeight: '300',
               // color: t => t.colors.gray[7],
               fontSize: t => t.fontSizes[2],
+              maxWidth: '600px',
             },
           }}
         >
           <section>
-            <h1
+            <div
               sx={{
-                fontFamily: 'Nunito+Sans',
-                letterSpacing: -0.5,
-                color: t => t.colors.gray[9],
-                fontWeight: '600',
-                fontSize: t => t.fontSizes[5],
-                m: 0,
+                display: 'flex',
+                alignItems: 'center',
+                position: 'relative',
+                mb: '40px',
               }}
             >
-              Hi! I'm Matheus
-            </h1>
-            {/* <div
+              <StaticImage
+                src="../images/profile.jpeg"
+                layout="fixed"
+                alt="A photo of Matheus"
+                width={150}
+                placeholder="blurred"
+                draggable="false"
                 sx={{
-                  position: 'relative',
-                  mt: '2',
+                  position: 'absolute',
+                  filter: 'blur(80px) opacity(0.35)',
+                  transform: 'scale(1.5) translateX(5%)',
+                  borderRadius: '50%',
+                }}
+              />
+              <StaticImage
+                src="../images/profile.jpeg"
+                layout="fixed"
+                alt="A photo of Matheus"
+                width={180}
+                placeholder="blurred"
+                draggable="false"
+                sx={{
+                  borderRadius: '50%',
+                  filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
+                }}
+              />
+              <h1
+                sx={{
+                  position: 'absolute',
+                  bottom: -10,
+                  left: 190,
+                  fontFamily: 'Nunito+Sans',
+                  letterSpacing: -0.5,
+                  color: t => t.colors.gray[9],
+                  fontWeight: '600',
+                  fontSize: t => t.fontSizes[6],
+                  m: 0,
+                  filter: 'drop-shadow(0px 0px 30px #fff)',
                 }}
               >
-                <StaticImage
-                  src="../images/profilePhoto.jpg"
-                  layout="fixed"
-                  alt="A photo of Matheus"
-                  width={100}
-                  placeholder="blurred"
-                  draggable="false"
-                  sx={{
-                    flexShrink: 0,
-                    ml: 4,
-                    mt: 3,
-                    animation: `${morph} 16s ease-in-out infinite`,
-                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-                    transition: 'all 1s ease-in-out',
-                  }}
-                />
-                <div
-                  sx={{
-                    position: 'absolute',
-                    top: '16px',
-                    right: '-10px',
-                    background:
-                      'linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%)',
-                    animation: `${morph} 16s ease-in-out infinite`,
-                    borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
-                    transition: 'all 1s ease-in-out',
-                    zIndex: -1,
-                    width: '100px',
-                    height: '180px',
-                  }}
-                ></div>
-              </div> */}
+                Hi! I'm Matheus
+              </h1>
+            </div>
             <p>
               I'm a 29-year-old engineer from Brazil, taking the first steps in
               my career as a software developer. Currently, I'm studying front

@@ -60,9 +60,9 @@ const mainHeading = {
   alignItems: 'center',
 
   h1: {
-    fontFamily: t => t.fonts.quicksand,
-    fontSize: t => t.fontSizes[2],
-    letterSpacing: '-0.5px',
+    fontFamily: 'Nunito+Sans',
+    fontSize: t => t.fontSizes[1],
+    // letterSpacing: '-0.2px',
     fontWeight: '700',
     color: t => t.colors.gray[9],
 
