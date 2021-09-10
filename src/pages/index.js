@@ -98,7 +98,7 @@ const MainHeader = () => (
         fontFamily: t => t.fonts.heading,
         letterSpacing: -0.5,
         color: t => t.colors.gray[9],
-        fontWeight: t => t.fontWeights.extra,
+        fontWeight: t => t.fontWeights.bold,
         fontSize: t => t.fontSizes[7],
         m: 0,
         transform: 'translateY(10%) translateX(5%)',
