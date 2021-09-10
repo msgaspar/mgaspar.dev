@@ -13,7 +13,10 @@ function Header() {
             Matheus Gaspar<span>/web developer</span>
           </h1>
           <div sx={socialLinks}>
-            <a href="http://github.com" sx={{ '&:hover': { color: '#000' } }}>
+            <a
+              href="http://github.com"
+              sx={{ '&:hover': { color: t => t.colors.github } }}
+            >
               <FaGithub />
             </a>
             <a
