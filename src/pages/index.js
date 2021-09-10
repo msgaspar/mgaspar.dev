@@ -3,14 +3,28 @@ import { jsx } from 'theme-ui';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Container from '../components/Container';
-import Navbar from '../components/Navbar';
 
 const profileImgPath = '../images/profile.jpeg';
 
 const IndexPage = () => {
   return (
     <Container>
-      <MainContainer>
+      <div
+        sx={{
+          header: {
+            mt: t => t.space[5],
+            mb: t => t.space[5],
+          },
+          p: {
+            fontFamily: t => t.fonts.body,
+            fontWeight: t => t.fontWeights.light,
+            fontSize: t => t.fontSizes[2],
+            maxWidth: '600px',
+            mx: 'auto',
+            textAlign: 'justify',
+          },
+        }}
+      >
         <MainHeader />
         <section>
           <p>
@@ -34,33 +48,10 @@ const IndexPage = () => {
             journey.
           </p>
         </section>
-      </MainContainer>
-      <Navbar />
+      </div>
     </Container>
   );
 };
-
-const MainContainer = ({ children }) => (
-  <main
-    sx={{
-      flex: 1,
-      header: {
-        mt: t => t.space[4],
-        mb: t => t.space[5],
-      },
-      p: {
-        fontFamily: t => t.fonts.body,
-        fontWeight: t => t.fontWeights.light,
-        fontSize: t => t.fontSizes[2],
-        maxWidth: '600px',
-        mx: 'auto',
-        textAlign: 'justify',
-      },
-    }}
-  >
-    {children}
-  </main>
-);
 
 const MainHeader = () => (
   <header

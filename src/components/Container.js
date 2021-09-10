@@ -1,21 +1,16 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import Header from './Header';
+import Navbar from './Navbar';
 
 function Container({ children }) {
   return (
     <ContainerLayout>
       <Header />
-      <div
-        sx={{
-          flexGrow: 1,
-          display: 'flex',
-          width: '100%',
-          maxWidth: t => t.breakpoints[1],
-        }}
-      >
-        {children}
-      </div>
+      <BodyLayout>
+        <Content>{children}</Content>
+        <Navbar />
+      </BodyLayout>
     </ContainerLayout>
   );
 }
@@ -27,11 +22,35 @@ const ContainerLayout = ({ children }) => (
       flexDirection: 'column',
       alignItems: 'center',
       width: '100%',
-      minHeight: '100vh',
+      minHeight: '100%',
     }}
   >
     {children}
   </div>
+);
+
+const BodyLayout = ({ children }) => (
+  <div
+    sx={{
+      flexGrow: 1,
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+      maxWidth: t => t.breakpoints[1],
+    }}
+  >
+    {children}
+  </div>
+);
+
+const Content = ({ children }) => (
+  <main
+    sx={{
+      flex: 1,
+    }}
+  >
+    {children}
+  </main>
 );
 
 export default Container;

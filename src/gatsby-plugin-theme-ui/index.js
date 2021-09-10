@@ -65,6 +65,13 @@ const theme = {
     bold: 700,
     extra: 800,
   },
+  styles: {
+    root: {
+      'html, body, #___gatsby': {
+        height: '100%',
+      },
+    },
+  },
 };
 
 export default theme;
