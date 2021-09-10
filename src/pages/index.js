@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { StaticImage } from 'gatsby-plugin-image';
+import { useColorMode } from '@theme-ui/color-modes';
 
 import Container from '../components/Container';
 
@@ -12,8 +13,7 @@ const IndexPage = () => {
       <div
         sx={{
           header: {
-            mt: t => t.space[5],
-            mb: t => t.space[5],
+            my: t => t.space[5],
           },
           p: {
             fontFamily: t => t.fonts.body,
@@ -57,56 +57,62 @@ const IndexPage = () => {
   );
 };
 
-const MainHeader = () => (
-  <header
-    sx={{
-      display: 'flex',
-      alignItems: 'flex-end',
-      position: 'relative',
-      width: 'fit-content',
-      pl: '67px',
-    }}
-  >
-    <StaticImage
-      src={profileImgPath}
-      layout="fixed"
-      alt="A photo of Matheus"
-      width={150}
-      placeholder="blurred"
-      draggable="false"
+const MainHeader = () => {
+  const [colorMode] = useColorMode();
+  const isDark = colorMode === 'dark';
+  return (
+    <header
       sx={{
-        position: 'absolute',
-        filter: 'blur(80px) opacity(0.3)',
-        transform: 'scale(1.5) translateX(15%) translateY(15%)',
-        borderRadius: '50%',
-      }}
-    />
-    <StaticImage
-      src={profileImgPath}
-      layout="fixed"
-      alt="A photo of Matheus"
-      width={150}
-      placeholder="blurred"
-      draggable="false"
-      sx={{
-        borderRadius: '50%',
-        filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
-      }}
-    />
-    <h1
-      sx={{
-        fontFamily: t => t.fonts.heading,
-        letterSpacing: -0.5,
-        color: t => t.colors.heading,
-        fontWeight: t => t.fontWeights.bold,
-        fontSize: t => t.fontSizes[7],
-        m: 0,
-        transform: 'translateY(10%) translateX(5%)',
+        display: 'flex',
+        alignItems: 'flex-end',
+        position: 'relative',
+        width: 'fit-content',
+        pl: '67px',
       }}
     >
-      Hi! I'm Matheus
-    </h1>
-  </header>
-);
+      <StaticImage
+        src={profileImgPath}
+        layout="fixed"
+        width={150}
+        placeholder="blurred"
+        draggable="false"
+        sx={{
+          position: 'absolute',
+          filter: `blur(80px) opacity(${isDark ? 1 : 0.35})`,
+          transform: 'scale(1.5) translateX(15%) translateY(15%)',
+          borderRadius: '50%',
+        }}
+      />
+      <StaticImage
+        src={profileImgPath}
+        layout="fixed"
+        alt="A photo of Matheus"
+        width={150}
+        placeholder="blurred"
+        draggable="false"
+        sx={{
+          borderRadius: '50%',
+          filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
+          boxShadow: t => `0 0 0 3px ${t.colors.background},0 0 0 6px #9580ff`,
+        }}
+      />
+      <h1
+        sx={{
+          fontFamily: t => t.fonts.heading,
+          letterSpacing: -0.5,
+          color: t => t.colors.heading,
+          fontWeight: t => t.fontWeights.bold,
+          fontSize: t => t.fontSizes[7],
+          m: 0,
+          backgroundImage:
+            'linear-gradient(135deg, rgb(149, 128, 255) 0px, rgb(128, 255, 234) 100%)',
+          transform: 'translateY(10%) translateX(5%)',
+        }}
+      >
+        Hi! I'm Matheus
+      </h1>
+    </header>
+  );
+};
 
 export default IndexPage;
