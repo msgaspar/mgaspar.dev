@@ -43,6 +43,7 @@ const headerLayout = {
   justifyContent: 'center',
   width: '100%',
   height: t => t.space[5],
+  mt: t => t.space[3],
   flexShrink: 0,
 };
 

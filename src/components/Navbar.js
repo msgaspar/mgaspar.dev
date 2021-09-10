@@ -11,7 +11,7 @@ function Navbar() {
         alignItems: 'flex-end',
         p: t => t.space[2],
         flexShrink: 0,
-        mt: t => t.space[4],
+        mt: t => t.space[5],
         '> a': {
           textDecoration: 'none',
           color: t => t.colors.gray[6],

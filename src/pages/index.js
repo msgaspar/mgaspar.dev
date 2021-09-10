@@ -19,9 +19,9 @@ const IndexPage = () => {
             fontFamily: t => t.fonts.body,
             fontWeight: t => t.fontWeights.light,
             fontSize: t => t.fontSizes[2],
-            maxWidth: '600px',
+            maxWidth: '550px',
             mx: 'auto',
-            textAlign: 'justify',
+            lineHeight: 1.6,
           },
         }}
       >
@@ -42,10 +42,14 @@ const IndexPage = () => {
             nature, traveling or spending some time with family and friends.
             Always with a good cup a coffee.
           </p> */}
-          <p>
+          {/* <p>
             It's been one year since I left Civil Engineering to dive deep into
             the world of software, and it's just the beginning of an amazing
             journey.
+          </p> */}
+          <p>
+            This is my personal spot in the internet - learn more about me or
+            check what I've been working on recently.
           </p>
         </section>
       </div>
@@ -60,8 +64,7 @@ const MainHeader = () => (
       alignItems: 'flex-end',
       position: 'relative',
       width: 'fit-content',
-      mx: 'auto',
-      transform: 'translateX(-5%)',
+      pl: '67px',
     }}
   >
     <StaticImage
@@ -74,7 +77,7 @@ const MainHeader = () => (
       sx={{
         position: 'absolute',
         filter: 'blur(80px) opacity(0.35)',
-        transform: 'scale(1.5) translateX(5%)',
+        transform: 'scale(1.5) translateX(15%) translateY(15%)',
         borderRadius: '50%',
       }}
     />
@@ -96,7 +99,7 @@ const MainHeader = () => (
         letterSpacing: -0.5,
         color: t => t.colors.gray[9],
         fontWeight: t => t.fontWeights.extra,
-        fontSize: t => t.fontSizes[6],
+        fontSize: t => t.fontSizes[7],
         m: 0,
         transform: 'translateY(10%) translateX(5%)',
       }}

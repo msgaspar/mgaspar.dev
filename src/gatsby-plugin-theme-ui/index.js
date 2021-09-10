@@ -39,6 +39,7 @@ const theme = {
   fontSizes: [
     '0.875rem',
     '1rem',
+    '1.125rem',
     '1.25rem',
     '1.5rem',
     '1.875rem',
