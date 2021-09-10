@@ -21,7 +21,7 @@ const IndexPage = () => {
             fontSize: t => t.fontSizes[2],
             maxWidth: '550px',
             mx: 'auto',
-            lineHeight: 1.6,
+            lineHeight: t => t.lineHeights.body,
           },
         }}
       >
@@ -76,7 +76,7 @@ const MainHeader = () => (
       draggable="false"
       sx={{
         position: 'absolute',
-        filter: 'blur(80px) opacity(0.35)',
+        filter: 'blur(80px) opacity(0.3)',
         transform: 'scale(1.5) translateX(15%) translateY(15%)',
         borderRadius: '50%',
       }}
@@ -97,7 +97,7 @@ const MainHeader = () => (
       sx={{
         fontFamily: t => t.fonts.heading,
         letterSpacing: -0.5,
-        color: t => t.colors.gray[9],
+        color: t => t.colors.heading,
         fontWeight: t => t.fontWeights.bold,
         fontSize: t => t.fontSizes[7],
         m: 0,

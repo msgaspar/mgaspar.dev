@@ -14,10 +14,10 @@ function Navbar() {
         mt: t => t.space[5],
         '> a': {
           textDecoration: 'none',
-          color: t => t.colors.gray[6],
+          color: t => t.colors.muted,
           fontFamily: t => t.fonts.heading,
           fontSize: t => t.fontSizes[1],
-          fontWeight: t => t.fontWeights.regular,
+          fontWeight: t => t.fontWeights.light,
 
           '& + a': {
             mt: '4px',

@@ -1,11 +1,12 @@
 const theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
   colors: {
-    text: '#000',
-    background: '#fff',
+    background: '#FFF',
+    text: '#374151',
+    heading: '#111827',
+    muted: '#afb4be',
     primary: '#609',
     secondary: '#306',
-    muted: '#f6f6f6',
     toggleIcon: '#cbd5e0',
     gray: [
       '',
@@ -48,6 +49,9 @@ const theme = {
     '4rem',
     '4.5rem',
   ],
+  lineHeights: {
+    body: 1.625,
+  },
   space: [
     '0',
     '0.25rem',

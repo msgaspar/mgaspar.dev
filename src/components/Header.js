@@ -64,11 +64,11 @@ const mainHeading = {
     fontSize: t => t.fontSizes[1],
     letterSpacing: '-0.2px',
     fontWeight: t => t.fontWeights.bold,
-    color: t => t.colors.gray[9],
+    color: t => t.colors.heading,
 
     '> span': {
-      color: t => t.colors.gray[5],
-      fontWeight: t => t.fontWeights.regular,
+      color: t => t.colors.muted,
+      fontWeight: t => t.fontWeights.light,
     },
 
     '&:after': {
@@ -78,7 +78,7 @@ const mainHeading = {
       mx: t => t.space[2],
       width: t => t.space[2],
       height: '1px',
-      backgroundColor: t => t.colors.gray[4],
+      backgroundColor: t => t.colors.muted,
     },
   },
 };
@@ -94,11 +94,13 @@ const socialLinks = {
     verticalAlign: 'middle',
     mt: '3px',
     fontSize: t => t.fontSizes[3],
-    color: t => t.colors.gray[4],
+    color: t => t.colors.muted,
     transition: '0.2s ease',
+    opacity: 0.7,
 
     '&:hover': {
       transform: 'translateY(-1px)',
+      opacity: 1,
     },
   },
 };
