@@ -7,7 +7,7 @@ const theme = {
     muted: '#afb4be',
     primary: '#609',
     secondary: '#306',
-    toggleIcon: '#cbd5e0',
+    github: '#000',
     gray: [
       '',
       '#f7fafc',
@@ -22,14 +22,14 @@ const theme = {
     ],
     modes: {
       dark: {
-        //     text: tailwind.colors.gray[4],
+        text: '#f8f8f2',
         //     primary: tailwind.colors.purple[5],
         //     secondary: `#7f8ea3`,
-        toggleIcon: '#edf2f7',
-        //     background: `#1A202C`,
-        //     heading: tailwind.colors.white,
+        background: '#14141b',
+        heading: '#f8f8f2',
         //     divide: tailwind.colors.gray[8],
-        //     muted: tailwind.colors.gray[8],
+        muted: '#9ca0a8',
+        github: '#FFF',
       },
     },
   },
