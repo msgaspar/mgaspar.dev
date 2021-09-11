@@ -3,11 +3,13 @@ const theme = {
   colors: {
     background: '#FFF',
     text: '#374151',
-    heading: '#111827',
+    heading: '#374151',
     muted: '#afb4be',
     primary: '#609',
     secondary: '#306',
     github: '#000',
+    bgPattern1: '#ecf',
+    bgPattern2: '#fff',
     gray: [
       '',
       '#f7fafc',
@@ -72,7 +74,8 @@ const theme = {
   },
   styles: {
     root: {
-      'html, body, #___gatsby': {
+      height: '100%',
+      'body, #___gatsby, #gatsby-focus-wrapper': {
         height: '100%',
       },
     },
