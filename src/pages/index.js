@@ -104,9 +104,9 @@ const MainHeader = () => {
           fontWeight: t => t.fontWeights.bold,
           fontSize: t => t.fontSizes[7],
           m: 0,
-          backgroundImage:
-            'linear-gradient(135deg, rgb(149, 128, 255) 0px, rgb(128, 255, 234) 100%)',
-          transform: 'translateY(10%) translateX(5%)',
+          // backgroundImage:
+          //   'linear-gradient(135deg, rgb(149, 128, 255) 0px, rgb(128, 255, 234) 100%)',
+          transform: 'translateY(10%) translateX(8%)',
         }}
       >
         Hi! I'm Matheus
