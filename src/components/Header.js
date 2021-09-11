@@ -54,8 +54,9 @@ const headerContainer = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  width: '100%',
-  maxWidth: t => t.breakpoints[1],
+  width: t => t.breakpoints[1],
+  mx: t => t.space[4],
+  px: t => t.space[2],
 };
 
 const mainHeading = {
