@@ -18,9 +18,7 @@ const IndexPage = () => {
           p: {
             fontFamily: t => t.fonts.body,
             fontWeight: t => t.fontWeights.light,
-            fontSize: t => t.fontSizes[2],
-            maxWidth: '550px',
-            mx: 'auto',
+            fontSize: t => t.fontSizes[3],
             lineHeight: t => t.lineHeights.body,
           },
         }}
@@ -57,60 +55,42 @@ const IndexPage = () => {
   );
 };
 
-const MainHeader = () => {
-  const [colorMode] = useColorMode();
-  const isDark = colorMode === 'dark';
-  return (
-    <header
+const MainHeader = () => (
+  <header
+    sx={{
+      display: 'flex',
+      alignItems: 'flex-end',
+      position: 'relative',
+      width: 'fit-content',
+    }}
+  >
+    {/* <StaticImage
+      src={profileImgPath}
+      layout="fixed"
+      alt="A photo of Matheus"
+      width={150}
+      placeholder="blurred"
+      draggable="false"
       sx={{
-        display: 'flex',
-        alignItems: 'flex-end',
-        position: 'relative',
-        width: 'fit-content',
-        pl: '67px',
+        borderRadius: '50%',
+        // filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
+        boxShadow: t => `0 0 0 3px ${t.colors.background},0 0 0 6px orange`,
+      }}
+    /> */}
+    <h1
+      sx={{
+        fontFamily: t => t.fonts.heading,
+        letterSpacing: -0.5,
+        color: t => t.colors.heading,
+        fontWeight: t => t.fontWeights.extra,
+        fontSize: t => t.fontSizes[9],
+        m: 0,
+        // transform: 'translateY(10%) translateX(8%)',
       }}
     >
-      <StaticImage
-        src={profileImgPath}
-        layout="fixed"
-        width={150}
-        placeholder="blurred"
-        draggable="false"
-        sx={{
-          position: 'absolute',
-          filter: `blur(80px) opacity(${isDark ? 1 : 0.35})`,
-          transform: 'scale(1.5) translateX(15%) translateY(15%)',
-          borderRadius: '50%',
-        }}
-      />
-      <StaticImage
-        src={profileImgPath}
-        layout="fixed"
-        alt="A photo of Matheus"
-        width={150}
-        placeholder="blurred"
-        draggable="false"
-        sx={{
-          borderRadius: '50%',
-          filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
-          boxShadow: t => `0 0 0 3px ${t.colors.background},0 0 0 6px #9580ff`,
-        }}
-      />
-      <h1
-        sx={{
-          fontFamily: t => t.fonts.hand,
-          letterSpacing: 0.5,
-          color: t => t.colors.heading,
-          fontWeight: t => t.fontWeights.regular,
-          fontSize: t => t.fontSizes[8],
-          m: 0,
-          transform: 'translateY(10%) translateX(8%)',
-        }}
-      >
-        Hi! I'm Matheus
-      </h1>
-    </header>
-  );
-};
+      Hi! I'm Matheus
+    </h1>
+  </header>
+);
 
 export default IndexPage;

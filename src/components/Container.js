@@ -42,7 +42,7 @@ const ContainerLayout = ({ children }) => (
       minHeight: '100%',
       backgroundColor: t => t.colors.background,
       mx: 'auto',
-      boxShadow: '0px 0px 16px hsl(0deg 0% 0% / 0.15)',
+      boxShadow: t => t.colors.bgShadow,
     }}
   >
     {children}
@@ -56,7 +56,7 @@ const BodyLayout = ({ children }) => (
       display: 'flex',
       justifyContent: 'center',
       width: t => t.breakpoints[1],
-      mx: t => t.space[4],
+      mx: t => t.space[6],
     }}
   >
     {children}

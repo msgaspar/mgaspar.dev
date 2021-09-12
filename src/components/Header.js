@@ -65,7 +65,7 @@ const mainHeading = {
 
   h1: {
     fontFamily: t => t.fonts.heading,
-    fontSize: t => t.fontSizes[1],
+    fontSize: t => t.fontSizes[2],
     letterSpacing: '-0.2px',
     fontWeight: t => t.fontWeights.bold,
     color: t => t.colors.heading,
@@ -97,7 +97,7 @@ const socialLinks = {
     lineHeight: 1,
     verticalAlign: 'middle',
     mt: '3px',
-    fontSize: t => t.fontSizes[3],
+    fontSize: t => t.fontSizes[4],
     color: t => t.colors.muted,
     transition: '0.2s ease',
     opacity: 0.7,

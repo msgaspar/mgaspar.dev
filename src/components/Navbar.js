@@ -12,11 +12,12 @@ function Navbar() {
         p: t => t.space[2],
         flexShrink: 0,
         mt: t => t.space[5],
+        ml: t => t.space[5],
         '> a': {
           textDecoration: 'none',
           color: t => t.colors.muted,
           fontFamily: t => t.fonts.heading,
-          fontSize: t => t.fontSizes[1],
+          fontSize: t => t.fontSizes[2],
           fontWeight: t => t.fontWeights.light,
 
           '& + a': {
