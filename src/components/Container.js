@@ -23,10 +23,16 @@ const BackgroundPattern = () => (
       width: '100%',
       height: '100%',
       zIndex: '-999',
-      backgroundImage: t =>
-        `radial-gradient(${t.colors.bgPattern1} 0.9px, transparent 0.9px), radial-gradient(${t.colors.bgPattern1} 0.9px, ${t.colors.bgPattern2} 0.9px)`,
-      backgroundSize: '36px 36px',
-      backgroundPosition: '0 0,18px 18px',
+      // backgroundImage: t =>
+      //   `radial-gradient(${t.colors.bgPattern1} 0.9px, transparent 0.9px), radial-gradient(${t.colors.bgPattern1} 0.9px, ${t.colors.bgPattern2} 0.9px)`,
+      // backgroundSize: '36px 36px',
+      // backgroundPosition: '0 0,18px 18px',
+
+      backgroundImage:
+        'linear-gradient(#f2f2ff 2.2px, transparent 2.2px), linear-gradient(90deg, #f2f2ff 2.2px, transparent 2.2px), linear-gradient(#f2f2ff 1.1px, transparent 1.1px), linear-gradient(90deg, #f2f2ff 1.1px, #ffffff 1.1px)',
+      backgroundSize: '55px 55px, 55px 55px, 11px 11px, 11px 11px',
+      backgroundPosition:
+        '-2.2px -2.2px, -2.2px -2.2px, -1.1px -1.1px, -1.1px -1.1px',
     }}
   />
 );
