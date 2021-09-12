@@ -38,6 +38,7 @@ const theme = {
   fonts: {
     body: 'Signika, sans-serif',
     heading: 'Nunito Sans, sans-serif',
+    hand: '"Covered By Your Grace", "Nunito Sans", sans-serif',
   },
   fontSizes: [
     '0.875rem',

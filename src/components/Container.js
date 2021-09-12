@@ -47,6 +47,7 @@ const ContainerLayout = ({ children }) => (
       minHeight: '100%',
       backgroundColor: t => t.colors.background,
       mx: 'auto',
+      boxShadow: '0px 0px 16px hsl(0deg 0% 0% / 0.15)',
     }}
   >
     {children}
