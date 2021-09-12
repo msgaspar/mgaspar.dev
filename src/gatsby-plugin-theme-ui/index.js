@@ -8,7 +8,7 @@ const theme = {
     primary: '#609',
     secondary: '#306',
     github: '#000',
-    bgPattern1: '#ecf',
+    bgPattern1: '#f2f2ff',
     bgPattern2: '#fff',
     gray: [
       '',
@@ -32,6 +32,8 @@ const theme = {
         //     divide: tailwind.colors.gray[8],
         muted: '#9ca0a8',
         github: '#FFF',
+        bgPattern1: '#313142  ',
+        bgPattern2: '#14141b',
       },
     },
   },
