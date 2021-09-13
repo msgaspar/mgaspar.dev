@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Signika:300,400`,
+          `Signika:300,400,600`,
           `Nunito+Sans:400,600,700,800`,
           'Covered+By+Your+Grace',
         ],
