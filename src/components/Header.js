@@ -56,7 +56,6 @@ const headerContainer = {
   justifyContent: 'space-between',
   width: t => t.breakpoints[1],
   mx: t => t.space[4],
-  px: t => t.space[2],
 };
 
 const mainHeading = {
