@@ -4,10 +4,11 @@ const theme = {
     background: '#FFF',
     text: '#000',
     heading: '#000',
-    muted: '#afb4be',
+    muted: '#8a91a0',
     primary: '#609',
     secondary: '#306',
     github: '#000',
+    trybe: '#28a678',
     bgPattern1: '#f2f2ff',
     bgPattern2: '#fff',
     gray: [
