@@ -1,25 +1,37 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { StaticImage } from 'gatsby-plugin-image';
-import { useColorMode } from '@theme-ui/color-modes';
 
 import Container from '../components/Container';
-
-const profileImgPath = '../images/profile.jpeg';
 
 const IndexPage = () => {
   return (
     <Container>
       <div
         sx={{
+          pr: t => t.space[2],
           header: {
-            my: t => t.space[5],
+            mt: t => t.space[5],
+            mb: t => t.space[1],
           },
           p: {
             fontFamily: t => t.fonts.body,
             fontWeight: t => t.fontWeights.light,
             fontSize: t => t.fontSizes[3],
             lineHeight: t => t.lineHeights.body,
+
+            'strong, a': {
+              fontWeight: t => t.fontWeights.semi,
+            },
+
+            a: {
+              color: '#f83735',
+            },
+
+            '.trybe': {
+              fontWeight: t => t.fontWeights.semi,
+              // fontSize: t => t.fontSizes[4],
+              color: t => t.colors.trybe,
+            },
           },
         }}
       >
@@ -27,9 +39,11 @@ const IndexPage = () => {
         <section>
           <p>
             I'm a 29-year-old engineer from Brazil, taking the first steps in my
-            career as a software developer. Currently, I'm studying front and
-            back-end web development at the awesome school Trybe, with focus on
-            JavaScript, React and Node.js.
+            career as a <strong>software developer</strong>. Currently, I'm
+            studying front and back-end web development at the awesome school{' '}
+            <span className="trybe">Trybe</span>, with focus on{' '}
+            <strong>JavaScript</strong>,<strong>React</strong> and{' '}
+            <strong>Node.js</strong>.
           </p>
           {/* <p>
             I am fascinated about how computers can make our lives easier, solve
@@ -46,8 +60,9 @@ const IndexPage = () => {
             journey.
           </p> */}
           <p>
-            This is my personal spot in the internet - learn more about me or
-            check what I've been working on recently.
+            This is my personal spot in the internet - you can learn more{' '}
+            <a href="#">about me</a> or check what I've been{' '}
+            <a href="#">working on</a> recently.
           </p>
         </section>
       </div>
@@ -56,27 +71,7 @@ const IndexPage = () => {
 };
 
 const MainHeader = () => (
-  <header
-    sx={{
-      display: 'flex',
-      alignItems: 'flex-end',
-      position: 'relative',
-      width: 'fit-content',
-    }}
-  >
-    {/* <StaticImage
-      src={profileImgPath}
-      layout="fixed"
-      alt="A photo of Matheus"
-      width={150}
-      placeholder="blurred"
-      draggable="false"
-      sx={{
-        borderRadius: '50%',
-        // filter: 'drop-shadow(0px 0px 20px hsl(0deg 0% 0% / 0.15))',
-        boxShadow: t => `0 0 0 3px ${t.colors.background},0 0 0 6px orange`,
-      }}
-    /> */}
+  <header>
     <h1
       sx={{
         fontFamily: t => t.fonts.heading,
@@ -85,7 +80,16 @@ const MainHeader = () => (
         fontWeight: t => t.fontWeights.extra,
         fontSize: t => t.fontSizes[9],
         m: 0,
-        // transform: 'translateY(10%) translateX(8%)',
+
+        '&:after': {
+          display: 'block',
+          content: '""',
+          width: '100px',
+          height: '10px',
+          backgroundColor: '#fac832',
+          mt: '20px',
+          mb: '40px',
+        },
       }}
     >
       Hi! I'm Matheus
