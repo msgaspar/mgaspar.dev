@@ -25,6 +25,7 @@ const IndexPage = () => {
 
             a: {
               color: '#f83735',
+              textUnderlineOffset: '3px',
             },
 
             '.trybe': {
