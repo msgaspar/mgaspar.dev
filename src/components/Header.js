@@ -3,6 +3,7 @@ import { jsx } from 'theme-ui';
 import ColorModeToggle from './ColorModeToggle';
 import { FaGithub, FaEnvelope } from 'react-icons/fa';
 import { SiLinkedin } from 'react-icons/si';
+import { Link } from 'gatsby';
 
 function Header() {
   return (
@@ -10,7 +11,9 @@ function Header() {
       <div sx={headerContainer}>
         <div sx={mainHeading}>
           <h1>
-            Matheus Gaspar<span>/web developer</span>
+            <Link to="/">
+              Matheus Gaspar<span>/web developer</span>
+            </Link>
           </h1>
           <div sx={socialLinks}>
             <a
@@ -69,7 +72,12 @@ const mainHeading = {
     fontWeight: t => t.fontWeights.bold,
     color: t => t.colors.heading,
 
-    '> span': {
+    '> a': {
+      textDecoration: 'none',
+      color: 'inherit',
+    },
+
+    span: {
       color: t => t.colors.muted,
       fontWeight: t => t.fontWeights.light,
     },
