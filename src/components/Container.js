@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 function Container({ children }) {
   return (
     <ContainerLayout>
-      <BackgroundPattern />
+      {/* <BackgroundPattern /> */}
       <Header />
       <BodyLayout>
         <Content>{children}</Content>
