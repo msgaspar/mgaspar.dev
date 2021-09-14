@@ -11,7 +11,7 @@ function Navbar() {
         alignItems: 'flex-end',
         p: t => t.space[2],
         flexShrink: 0,
-        mt: t => t.space[5],
+        mt: t => t.space[4],
         ml: t => t.space[5],
         '> a': {
           textDecoration: 'none',
@@ -24,11 +24,21 @@ function Navbar() {
             mt: '4px',
           },
         },
+        '.active': {
+          color: 'text',
+          fontWeight: 'bold',
+        },
       }}
     >
-      <Link to="/">about me</Link>
-      <Link to="/">projects</Link>
-      <Link to="/">contact</Link>
+      <Link to="/about" activeClassName="active">
+        about me
+      </Link>
+      <Link to="/projects" activeClassName="active">
+        projects
+      </Link>
+      <Link to="/contact" activeClassName="active">
+        contact
+      </Link>
     </nav>
   );
 }
