@@ -7,6 +7,7 @@ const theme = {
     muted: '#8a91a0',
     primary: '#609',
     secondary: '#306',
+    link: '#f83735',
     github: '#000',
     trybe: '#28a678',
     bgPattern1: '#f2f2ff',
