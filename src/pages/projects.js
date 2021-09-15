@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Container from '../components/Container';
 import PageTitle from '../components/PageTitle';
@@ -9,6 +10,7 @@ function ProjectsPage() {
     <Container>
       <div>
         <PageTitle title="Projects" />
+        <StaticImage src="../images/zefirula-thumb.png" />
       </div>
     </Container>
   );
