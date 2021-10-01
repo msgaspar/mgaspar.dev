@@ -26,9 +26,21 @@ function ProjectsPage() {
             top: 0,
             bottom: 0,
             overflow: 'hidden',
+
+            transition: 'transform 1s',
+            '&:hover': {
+              '.gatsby-image-wrapper': {
+                transform: 'scale(1.05)',
+              },
+            },
           }}
         >
-          <StaticImage src="../images/zefirula-thumb.png" />
+          <StaticImage
+            sx={{
+              transition: 'transform 1s',
+            }}
+            src="../images/zefirula-thumb.png"
+          />
         </div>
         <h2
           sx={{
