@@ -1,6 +1,18 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { StaticImage } from 'gatsby-plugin-image';
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiChakraui,
+  SiVercel,
+  SiNodedotjs,
+  SiExpress,
+  SiAmazonaws,
+  SiDocker,
+  SiPostgresql,
+} from 'react-icons/si';
 
 import Container from '../components/Container';
 
@@ -32,6 +44,9 @@ function ProjectsPage() {
               '.gatsby-image-wrapper': {
                 transform: 'scale(1.05)',
               },
+              '.project-description': {
+                transform: 'translateX(0)',
+              },
             },
           }}
         >
@@ -41,11 +56,82 @@ function ProjectsPage() {
             }}
             src="../images/zefirula-thumb.png"
           />
+          <div
+            className="project-description"
+            sx={{
+              position: 'absolute',
+              right: '0',
+              top: 0,
+              width: '300px',
+              p: 4,
+              height: '100%',
+              backgroundColor: '#252525',
+              color: 'white',
+              opacity: 0.95,
+              transform: 'translateX(100%)',
+              transition: 'transform 0.5s',
+              fontFamily: 'body',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            <p
+              sx={{
+                fontWeight: 'light',
+                flex: 1,
+              }}
+            >
+              A full-stack web application that connects to the official
+              CartolaFC API and allows the creation and management of custom
+              leagues.
+            </p>
+            <h3
+              sx={{
+                fontSize: t => t.fontSizes[1],
+              }}
+            >
+              Front-end
+            </h3>
+            <div
+              sx={{
+                display: 'flex',
+                gap: '8px',
+              }}
+            >
+              <SiTypescript />
+              <SiReact />
+              <SiNextdotjs />
+              <SiChakraui />
+              <SiVercel />
+            </div>
+            <h3
+              sx={{
+                fontSize: t => t.fontSizes[1],
+                marginTop: 4,
+              }}
+            >
+              Back-end
+            </h3>
+            <div
+              sx={{
+                display: 'flex',
+                gap: '8px',
+              }}
+            >
+              <SiTypescript />
+              <SiNodedotjs />
+              <SiExpress />
+              <SiPostgresql />
+              <SiDocker />
+              <SiAmazonaws />
+            </div>
+          </div>
         </div>
         <h2
           sx={{
             position: 'absolute',
             fontFamily: 'heading',
+            opacity: 0.95,
             t: 0,
             l: 0,
             backgroundColor: '#252525',
