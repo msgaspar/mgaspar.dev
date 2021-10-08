@@ -9,19 +9,25 @@ function Navbar() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
+        width: '100px',
         p: t => t.space[2],
         flexShrink: 0,
         mt: t => t.space[4],
-        ml: t => t.space[5],
+        ml: t => t.space[4],
         '> a': {
           textDecoration: 'none',
           color: t => t.colors.muted,
           fontFamily: t => t.fonts.heading,
           fontSize: t => t.fontSizes[2],
           fontWeight: t => t.fontWeights.light,
+          transition: 'color 0.3s',
+
+          '&:hover': {
+            color: 'text',
+          },
 
           '& + a': {
-            mt: '4px',
+            mt: '6px',
           },
         },
         '.active': {
