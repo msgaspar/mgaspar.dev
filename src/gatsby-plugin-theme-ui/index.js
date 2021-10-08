@@ -83,6 +83,9 @@ const theme = {
       'body, #___gatsby, #gatsby-focus-wrapper': {
         height: '100%',
       },
+      '*::selection': {
+        background: '#ffda6c',
+      },
     },
   },
 };
