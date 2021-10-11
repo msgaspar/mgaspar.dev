@@ -6,96 +6,103 @@ import Layout from '../components/Layout';
 const IndexPage = () => {
   return (
     <Layout>
-      <div
+      <MainHeading
+        heading="Matheus Gaspar"
+        subheading="Full-stack web developer"
         sx={{
-          pr: t => t.space[2],
-          header: {
-            mt: t => t.space[5],
-            mb: t => t.space[1],
-          },
-          p: {
-            fontFamily: t => t.fonts.body,
-            fontWeight: t => t.fontWeights.light,
-            fontSize: t => t.fontSizes[3],
-            lineHeight: t => t.lineHeights.body,
-
-            'strong, a': {
-              fontWeight: t => t.fontWeights.semi,
-            },
-
-            a: {
-              color: 'link',
-              textUnderlineOffset: '3px',
-            },
-
-            '.trybe': {
-              fontWeight: t => t.fontWeights.semi,
-              // fontSize: t => t.fontSizes[4],
-              color: t => t.colors.trybe,
-            },
-          },
+          mt: 5,
+          mb: 5,
         }}
-      >
-        <MainHeader />
-        <section>
-          <p>
-            I'm a 29-year-old engineer from Brazil, taking the first steps in my
-            career as a <strong>software developer</strong>. Currently, I'm
-            studying front and back-end web development at the awesome school{' '}
-            <span className="trybe">Trybe</span>, with focus on{' '}
-            <strong>JavaScript</strong>,<strong>React</strong> and{' '}
-            <strong>Node.js</strong>.
-          </p>
-          {/* <p>
-            I am fascinated about how computers can make our lives easier, solve
-            annoying problems and even help us build great habits. They can also
-            provide us beautiful and life-changing experiences! And one of the
-            things I enjoy the most is making these things happen. When I'm not
-            coding or studying, you'll probably find me cooking, enjoying
-            nature, traveling or spending some time with family and friends.
-            Always with a good cup a coffee.
-          </p> */}
-          {/* <p>
-            It's been one year since I left Civil Engineering to dive deep into
-            the world of software, and it's just the beginning of an amazing
-            journey.
-          </p> */}
-          <p>
-            This is my personal spot in the internet - you can learn more{' '}
-            <a href="/#">about me</a> or check what I've been{' '}
-            <a href="/#">working on</a> recently.
-          </p>
-        </section>
-      </div>
+      />
+
+      <IntroText>
+        <p>
+          I'm a 29-year-old engineer from Brazil, taking the first steps in my
+          career as a <strong>software developer</strong>. Currently, I'm
+          studying front and back-end web development at the awesome school{' '}
+          <span className="trybe">Trybe</span>, with focus on{' '}
+          <strong>JavaScript</strong>, <strong>React</strong> and{' '}
+          <strong>Node.js</strong>.
+        </p>
+        {/* <p>
+          I am fascinated about how computers can make our lives easier, solve
+          annoying problems and even help us build great habits. They can also
+          provide us beautiful and life-changing experiences! And one of the
+          things I enjoy the most is making these things happen. When I'm not
+          coding or studying, you'll probably find me cooking, enjoying
+          nature, traveling or spending some time with family and friends.
+          Always with a good cup a coffee.
+        </p> */}
+        {/* <p>
+          It's been one year since I left Civil Engineering to dive deep into
+          the world of software, and it's just the beginning of an amazing
+          journey.
+        </p> */}
+        <p>
+          This is my personal spot in the internet - you can learn more{' '}
+          <a href="/#">about me</a> or check what I've been{' '}
+          <a href="/#">working on</a> recently.
+        </p>
+      </IntroText>
     </Layout>
   );
 };
 
-const MainHeader = () => (
-  <header>
+const MainHeading = ({ heading, subheading, ...props }) => (
+  <header {...props}>
     <h1
       sx={{
-        fontFamily: t => t.fonts.heading,
-        letterSpacing: -0.5,
-        color: t => t.colors.heading,
-        fontWeight: t => t.fontWeights.extra,
-        fontSize: t => t.fontSizes[9],
+        fontFamily: 'heading',
+        fontWeight: 'extra',
+        letterSpacing: -1,
+        fontSize: 7,
         m: 0,
-
-        '&:after': {
-          display: 'block',
-          content: '""',
-          width: '100px',
-          height: '10px',
-          backgroundColor: '#fac832',
-          mt: '20px',
-          mb: '40px',
-        },
       }}
     >
-      Hi! I'm Matheus
+      {heading}
     </h1>
+    <h2
+      sx={{
+        m: 0,
+        fontFamily: 'body',
+        fontWeight: 'light',
+        fontSize: 4,
+      }}
+    >
+      {subheading}
+    </h2>
   </header>
+);
+
+const IntroText = ({ children, ...props }) => (
+  <section
+    {...props}
+    sx={{
+      pt: 2,
+      p: {
+        fontFamily: 'body',
+        fontWeight: 'light',
+        fontSize: 3,
+        lineHeight: 'body',
+
+        'strong, a': {
+          fontWeight: 'semi',
+        },
+
+        a: {
+          color: 'link',
+          textUnderlineOffset: '3px',
+        },
+
+        '.trybe': {
+          fontWeight: 'semi',
+          color: 'trybe',
+        },
+      },
+    }}
+  >
+    {children}
+  </section>
 );
 
 export default IndexPage;
