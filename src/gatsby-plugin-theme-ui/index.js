@@ -79,6 +79,7 @@ const theme = {
   },
   styles: {
     root: {
+      overflowY: 'scroll',
       height: '100%',
       'body, #___gatsby, #gatsby-focus-wrapper': {
         height: '100%',
