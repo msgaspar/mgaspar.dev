@@ -84,7 +84,7 @@ const theme = {
         height: '100%',
       },
       '*::selection': {
-        background: '#ffda6c',
+        background: '#2daadb4d',
       },
     },
   },
