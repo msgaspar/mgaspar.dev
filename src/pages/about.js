@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Container from '../components/Container';
+import Layout from '../components/Layout';
 
 function AboutPage() {
   return (
-    <Container>
+    <Layout>
       <div>about</div>
-    </Container>
+    </Layout>
   );
 }
 
