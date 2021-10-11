@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
+import { BsArrowRight } from 'react-icons/bs';
 
 const IndexPage = () => {
   return (
@@ -50,6 +51,48 @@ const IndexPage = () => {
           <a href="/#">working on</a> recently.
         </p>
       </IntroText>
+
+      <section
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          my: 5,
+        }}
+      >
+        <SectionTitle>Latest projects</SectionTitle>
+        <div
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            w: '100%',
+            height: '300px',
+          }}
+        >
+          <ProjectStub title="Zé Firula" />
+          <ProjectStub title="Trivia" />
+          <ProjectStub title="Recipes8" />
+        </div>
+        <div
+          sx={{
+            my: 4,
+            fontFamily: 'body',
+            fontSize: 3,
+            fontWeight: 'semi',
+            a: {
+              color: 'link',
+              textUnderlineOffset: '1px',
+              textDecorationThickness: '2px',
+            },
+            svg: {
+              verticalAlign: 'middle',
+            },
+          }}
+        >
+          <Link to="/projects">
+            Check all projects <BsArrowRight />
+          </Link>
+        </div>
+      </section>
     </Layout>
   );
 };
@@ -84,7 +127,7 @@ const IntroText = ({ children, ...props }) => (
   <section
     {...props}
     sx={{
-      pt: 2,
+      py: 2,
       p: {
         fontFamily: 'body',
         fontWeight: 'light',
@@ -110,6 +153,44 @@ const IntroText = ({ children, ...props }) => (
   >
     {children}
   </section>
+);
+
+const SectionTitle = ({ children, ...props }) => (
+  <h3
+    {...props}
+    sx={{
+      fontFamily: 'heading',
+      fontSize: 5,
+      fontWeight: 'extra',
+      m: 0,
+      pb: 4,
+    }}
+  >
+    {children}
+  </h3>
+);
+
+const ProjectStub = ({ title, ...props }) => (
+  <div
+    sx={{
+      height: '100%',
+      flex: 1,
+      bg: '#e3e3e3',
+      m: 1,
+      p: 4,
+      borderRadius: '8px',
+    }}
+  >
+    <h4
+      sx={{
+        fontFamily: 'heading',
+        m: 0,
+        fontSize: 4,
+      }}
+    >
+      {title}
+    </h4>
+  </div>
 );
 
 export default IndexPage;

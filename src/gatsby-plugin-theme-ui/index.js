@@ -1,6 +1,6 @@
 import { colors, darkModeColors } from './colors';
 
-export default {
+const theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
   colors: {
     ...colors,
@@ -61,3 +61,5 @@ export default {
     },
   },
 };
+
+export default theme;
