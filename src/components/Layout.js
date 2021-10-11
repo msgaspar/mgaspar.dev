@@ -5,7 +5,7 @@ import { Header } from './Header';
 function Layout({ children }) {
   return (
     <ContainerLayout>
-      <Header sx={{ marginY: 3 }} />
+      <Header sx={{ mt: 3, mb: 0 }} />
       <BodyLayout>
         <Content>{children}</Content>
       </BodyLayout>

@@ -18,11 +18,14 @@ const HeaderLayout = props => (
   <div
     {...props}
     sx={{
+      position: 'sticky',
+      top: '0',
+      bg: 'background',
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
       flexShrink: 0,
-      height: '60px',
+      height: '100px',
     }}
   />
 );
