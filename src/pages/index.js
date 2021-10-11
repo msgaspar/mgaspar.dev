@@ -62,8 +62,8 @@ const IndexPage = () => {
           </p> */}
           <p>
             This is my personal spot in the internet - you can learn more{' '}
-            <a href="#">about me</a> or check what I've been{' '}
-            <a href="#">working on</a> recently.
+            <a href="/#">about me</a> or check what I've been{' '}
+            <a href="/#">working on</a> recently.
           </p>
         </section>
       </div>

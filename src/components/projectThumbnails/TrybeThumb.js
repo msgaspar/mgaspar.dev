@@ -55,7 +55,7 @@ const ProjectThumbContent = props => (
   />
 );
 
-const ProjectTitle = props => (
+const ProjectTitle = ({ children, ...props }) => (
   <h2
     {...props}
     sx={{
@@ -71,7 +71,9 @@ const ProjectTitle = props => (
       fontSize: t => t.fontSizes[5],
       mt: '-5px',
     }}
-  />
+  >
+    {children}
+  </h2>
 );
 
 export default TrybeThumb;
