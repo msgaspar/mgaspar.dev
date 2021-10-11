@@ -1,41 +1,12 @@
-const theme = {
+import { colors, darkModeColors } from './colors';
+
+export default {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
   colors: {
-    background: '#FFF',
-    text: '#000',
-    heading: '#000',
-    muted: '#8a91a0',
-    primary: '#609',
-    secondary: '#306',
-    link: '#f83735',
-    github: '#000',
-    trybe: '#28a678',
-    bgPattern1: '#f2f2ff',
-    bgPattern2: '#fff',
-    gray: [
-      '',
-      '#f7fafc',
-      '#edf2f7',
-      '#e2e8f0',
-      '#cbd5e0',
-      '#a0aec0',
-      '#718096',
-      '#4a5568',
-      '#2d3748',
-      '#1a202c',
-    ],
+    ...colors,
     modes: {
       dark: {
-        text: '#f8f8f2',
-        //     primary: tailwind.colors.purple[5],
-        //     secondary: `#7f8ea3`,
-        background: '#121212',
-        heading: '#f8f8f2',
-        //     divide: tailwind.colors.gray[8],
-        muted: '#b3b3b3',
-        github: '#FFF',
-        bgPattern1: '#000  ',
-        bgPattern2: '#121212',
+        ...darkModeColors,
       },
     },
   },
@@ -90,5 +61,3 @@ const theme = {
     },
   },
 };
-
-export default theme;
