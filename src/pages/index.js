@@ -10,8 +10,7 @@ const IndexPage = () => {
         heading="Matheus Gaspar"
         subheading="Full-stack web developer"
         sx={{
-          mt: 5,
-          mb: 5,
+          my: 5,
         }}
       />
 
@@ -20,9 +19,16 @@ const IndexPage = () => {
           I'm a 29-year-old engineer from Brazil, taking the first steps in my
           career as a <strong>software developer</strong>. Currently, I'm
           studying front and back-end web development at the awesome school{' '}
-          <span className="trybe">Trybe</span>, with focus on{' '}
-          <strong>JavaScript</strong>, <strong>React</strong> and{' '}
-          <strong>Node.js</strong>.
+          <a
+            href="https://www.betrybe.com"
+            className="trybe"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Trybe
+          </a>
+          , with focus on <strong>JavaScript</strong>, <strong>React</strong>{' '}
+          and <strong>Node.js</strong>.
         </p>
         {/* <p>
           I am fascinated about how computers can make our lives easier, solve
@@ -91,7 +97,8 @@ const IntroText = ({ children, ...props }) => (
 
         a: {
           color: 'link',
-          textUnderlineOffset: '3px',
+          textUnderlineOffset: '1px',
+          textDecorationThickness: '2px',
         },
 
         '.trybe': {
