@@ -8,6 +8,7 @@ function Navbar() {
       <NavLink to="/" title="home" />
       <NavLink to="/projects" title="projects" />
       <NavLink to="/about" title="about me" />
+      <NavLink to="/contact" title="contact" />
     </NavContainer>
   );
 }
@@ -19,7 +20,7 @@ const NavContainer = props => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      width: '220px',
+      width: '300px',
     }}
   />
 );
