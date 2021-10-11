@@ -41,6 +41,7 @@ const NavLink = ({ to, title }) => (
       },
       '.active': {
         color: 'text',
+        transition: 'none',
       },
     }}
   >
