@@ -7,6 +7,7 @@ module.exports = {
     primary: '#609',
     secondary: '#306',
     link: '#f83735',
+    hoverLink: '#DD6B20',
     trybe: '#018353',
   },
   darkModeColors: {

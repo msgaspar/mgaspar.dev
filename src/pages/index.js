@@ -15,7 +15,7 @@ const IndexPage = () => {
         }}
       />
 
-      <IntroText>
+      <IntroText className="styled-link">
         <p>
           I'm a 29-year-old engineer from Brazil, taking the first steps in my
           career as a <strong>software developer</strong>. Currently, I'm
@@ -73,19 +73,11 @@ const IndexPage = () => {
           <ProjectStub title="Recipes8" />
         </div>
         <div
+          className="styled-link"
           sx={{
             my: 4,
             fontFamily: 'body',
             fontSize: 3,
-            fontWeight: 'semi',
-            a: {
-              color: 'link',
-              textUnderlineOffset: '1px',
-              textDecorationThickness: '2px',
-            },
-            svg: {
-              verticalAlign: 'middle',
-            },
           }}
         >
           <Link to="/projects">
@@ -134,14 +126,8 @@ const IntroText = ({ children, ...props }) => (
         fontSize: 3,
         lineHeight: 'body',
 
-        'strong, a': {
+        strong: {
           fontWeight: 'semi',
-        },
-
-        a: {
-          color: 'link',
-          textUnderlineOffset: '1px',
-          textDecorationThickness: '2px',
         },
 
         '.trybe': {

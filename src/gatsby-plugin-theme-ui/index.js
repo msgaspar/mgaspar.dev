@@ -1,4 +1,5 @@
 import { colors, darkModeColors } from './colors';
+import { globalStyles } from './global';
 
 const theme = {
   breakpoints: ['640px', '768px', '1024px', '1280px'],
@@ -49,16 +50,7 @@ const theme = {
     extra: 800,
   },
   styles: {
-    root: {
-      overflowY: 'scroll',
-      height: '100%',
-      'body, #___gatsby, #gatsby-focus-wrapper': {
-        height: '100%',
-      },
-      '*::selection': {
-        background: '#2daadb4d',
-      },
-    },
+    root: globalStyles,
   },
 };
 
