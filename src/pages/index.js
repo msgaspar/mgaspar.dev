@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Container from '../components/Container';
+import Layout from '../components/Layout';
 
 const IndexPage = () => {
   return (
-    <Container>
+    <Layout>
       <div
         sx={{
           pr: t => t.space[2],
@@ -67,7 +67,7 @@ const IndexPage = () => {
           </p>
         </section>
       </div>
-    </Container>
+    </Layout>
   );
 };
 
