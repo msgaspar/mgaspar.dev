@@ -26,6 +26,7 @@ const HeaderLayout = props => (
       width: '100%',
       flexShrink: 0,
       height: '100px',
+      zIndex: 10,
     }}
   />
 );

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import { BsArrowRight } from 'react-icons/bs';
 
@@ -90,28 +91,41 @@ const IndexPage = () => {
 };
 
 const MainHeading = ({ heading, subheading, ...props }) => (
-  <header {...props}>
-    <h1
-      sx={{
-        fontFamily: 'heading',
-        fontWeight: 'extra',
-        letterSpacing: -1,
-        fontSize: 7,
-        m: 0,
-      }}
-    >
-      {heading}
-    </h1>
-    <h2
-      sx={{
-        m: 0,
-        fontFamily: 'body',
-        fontWeight: 'light',
-        fontSize: 4,
-      }}
-    >
-      {subheading}
-    </h2>
+  <header
+    {...props}
+    sx={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'flex-start',
+      pr: 5,
+    }}
+  >
+    <div>
+      <h1
+        sx={{
+          fontFamily: 'heading',
+          fontWeight: 'extra',
+          letterSpacing: -1,
+          fontSize: 7,
+          m: 0,
+        }}
+      >
+        {heading}
+      </h1>
+      <h2
+        sx={{
+          m: 0,
+          fontFamily: 'body',
+          fontWeight: 'light',
+          fontSize: 4,
+        }}
+      >
+        {subheading}
+      </h2>
+    </div>
+    <div>
+      <StaticImage width={160} src="../images/profile.png" />
+    </div>
   </header>
 );
 
@@ -161,7 +175,7 @@ const ProjectStub = ({ title, ...props }) => (
     sx={{
       height: '100%',
       flex: 1,
-      bg: '#e3e3e3',
+      bg: 'offset',
       m: 1,
       p: 4,
       borderRadius: '8px',
