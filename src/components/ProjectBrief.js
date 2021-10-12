@@ -14,7 +14,7 @@ function ProjectBrief({
   title,
   description,
   slug = '',
-  type = 'personal',
+  type,
   inProgress = false,
   techsList = [],
   ...props
@@ -26,7 +26,8 @@ function ProjectBrief({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'stretch',
-        height: '100%',
+        height: '330px',
+        maxWidth: '248px',
         flex: 1,
         bg: 'offset',
         m: 1,
@@ -62,21 +63,23 @@ function ProjectBrief({
       >
         {description}
       </p>
-      <p
-        sx={{
-          color: `badges.${typeColors[type]}.color`,
-          bg: `badges.${typeColors[type]}.bg`,
-          width: 'fit-content',
-          px: 2,
-          py: 1,
-          borderRadius: '8px',
-          fontSize: 0,
-          m: 0,
-          fontFamily: 'body',
-        }}
-      >
-        {`${type} project`}
-      </p>
+      {type ? (
+        <p
+          sx={{
+            color: `badges.${typeColors[type]}.color`,
+            bg: `badges.${typeColors[type]}.bg`,
+            width: 'fit-content',
+            px: 2,
+            py: 1,
+            borderRadius: '8px',
+            fontSize: 0,
+            m: 0,
+            fontFamily: 'body',
+          }}
+        >
+          {`${type} project`}
+        </p>
+      ) : null}
       {inProgress ? (
         <p
           sx={{

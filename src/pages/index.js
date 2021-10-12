@@ -5,6 +5,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import { BsArrowRight } from 'react-icons/bs';
 import { ProjectBrief } from '../components/ProjectBrief';
+import {
+  PageSection,
+  SectionTitle,
+  TextContent,
+  TrybeLink,
+} from '../components/lib';
 
 const IndexPage = () => {
   return (
@@ -17,57 +23,45 @@ const IndexPage = () => {
         }}
       />
 
-      <IntroText className="styled-link">
-        <p>
-          I'm a 29-year-old engineer from Brazil, taking the first steps in my
-          career as a <strong>software developer</strong>. Currently, I'm
-          studying front and back-end web development at the awesome school{' '}
-          <a
-            href="https://www.betrybe.com"
-            className="trybe"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Trybe
-          </a>
-          , with focus on <strong>JavaScript</strong>, <strong>React</strong>{' '}
-          and <strong>Node.js</strong>.
-        </p>
-        {/* <p>
-          I am fascinated about how computers can make our lives easier, solve
-          annoying problems and even help us build great habits. They can also
-          provide us beautiful and life-changing experiences! And one of the
-          things I enjoy the most is making these things happen. When I'm not
-          coding or studying, you'll probably find me cooking, enjoying
-          nature, traveling or spending some time with family and friends.
-          Always with a good cup a coffee.
-        </p> */}
-        {/* <p>
-          It's been one year since I left Civil Engineering to dive deep into
-          the world of software, and it's just the beginning of an amazing
-          journey.
-        </p> */}
-        <p>
-          This is my personal spot in the internet - you can learn more{' '}
-          <a href="/#">about me</a> or check what I've been{' '}
-          <a href="/#">working on</a> recently.
-        </p>
-      </IntroText>
+      <section>
+        <TextContent sx={{ py: 2 }}>
+          <p>
+            I'm a 29-year-old engineer from Brazil, taking the first steps in my
+            career as a <strong>software developer</strong>. Currently, I'm
+            studying front and back-end web development at the awesome school{' '}
+            <TrybeLink />, with focus on <strong>JavaScript</strong>,{' '}
+            <strong>React</strong> and <strong>Node.js</strong>.
+          </p>
+          {/* <p>
+            I am fascinated about how computers can make our lives easier, solve
+            annoying problems and even help us build great habits. They can also
+            provide us beautiful and life-changing experiences! And one of the
+            things I enjoy the most is making these things happen. When I'm not
+            coding or studying, you'll probably find me cooking, enjoying
+            nature, traveling or spending some time with family and friends.
+            Always with a good cup a coffee.
+          </p> */}
+          {/* <p>
+            It's been one year since I left Civil Engineering to dive deep into
+            the world of software, and it's just the beginning of an amazing
+            journey.
+          </p> */}
+          <p>
+            This is my personal spot in the internet - you can learn more{' '}
+            <a href="/#">about me</a> or check what I've been{' '}
+            <a href="/#">working on</a> recently.
+          </p>
+        </TextContent>
+      </section>
 
-      <section
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          my: 3,
-        }}
-      >
+      <PageSection>
         <SectionTitle>Latest projects</SectionTitle>
         <div
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
             w: '100%',
-            height: '340px',
+            pt: 3,
           }}
         >
           <ProjectBrief
@@ -103,7 +97,7 @@ const IndexPage = () => {
             Check all projects <BsArrowRight />
           </Link>
         </div>
-      </section>
+      </PageSection>
     </Layout>
   );
 };
@@ -175,21 +169,6 @@ const IntroText = ({ children, ...props }) => (
   >
     {children}
   </section>
-);
-
-const SectionTitle = ({ children, ...props }) => (
-  <h3
-    {...props}
-    sx={{
-      fontFamily: 'heading',
-      fontSize: 5,
-      fontWeight: 'extra',
-      m: 0,
-      pb: 4,
-    }}
-  >
-    {children}
-  </h3>
 );
 
 export default IndexPage;
