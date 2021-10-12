@@ -37,7 +37,7 @@ const ColorModeButton = ({ children, onClick, isDark }) => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      transition: 'opacity 0.3s ease',
+      transition: 'opacity 0.2s ease',
       border: 'none',
       outline: 'none',
       background: 'none',

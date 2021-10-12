@@ -35,7 +35,7 @@ const NavLink = ({ to, title }) => (
         fontFamily: t => t.fonts.body,
         fontSize: t => t.fontSizes[2],
         fontWeight: t => t.fontWeights.regular,
-        transition: 'color 0.3s',
+        transition: 'color 0.2s',
         '&:hover': {
           color: 'text',
         },
@@ -46,7 +46,11 @@ const NavLink = ({ to, title }) => (
       },
     }}
   >
-    <Link to={to} activeClassName="active">
+    <Link
+      to={to}
+      activeClassName="active"
+      partiallyActive={to === '/' ? false : true}
+    >
       {title}
     </Link>
   </div>

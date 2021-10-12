@@ -14,7 +14,7 @@ const globalStyles = {
       color: 'link',
       textUnderlineOffset: '1px',
       textDecorationThickness: '2px',
-      transition: 'color 0.3s',
+      transition: 'color 0.2s',
       '&:hover': {
         color: 'hoverLink',
       },
