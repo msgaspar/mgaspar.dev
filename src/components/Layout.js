@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { Footer } from './Footer';
 import { Header } from './Header';
 
 function Layout({ children }) {
@@ -9,6 +10,7 @@ function Layout({ children }) {
       <BodyLayout>
         <Content>{children}</Content>
       </BodyLayout>
+      <Footer />
     </ContainerLayout>
   );
 }
