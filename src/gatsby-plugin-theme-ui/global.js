@@ -1,6 +1,7 @@
 const globalStyles = {
   overflowY: 'scroll',
   height: '100%',
+  fontFamily: 'body',
   'body, #___gatsby, #gatsby-focus-wrapper': {
     height: '100%',
   },
