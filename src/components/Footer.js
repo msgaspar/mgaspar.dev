@@ -1,9 +1,11 @@
 /** @jsx jsx */
-import { SiGithub, SiLinkedin } from 'react-icons/si';
-import { AiOutlineMail } from 'react-icons/ai';
 import { jsx } from 'theme-ui';
+import Tooltip from '@reach/tooltip';
+import '@reach/tooltip/styles.css';
+import { socialLinks } from '../utils/socialLinks';
 
 function Footer() {
+  const services = ['github', 'linkedin'];
   return (
     <footer
       sx={{
@@ -16,20 +18,38 @@ function Footer() {
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          fontSize: 5,
+          fontSize: 6,
           gap: 4,
-          my: 4,
+          my: 5,
         }}
       >
-        <span>
-          <SiGithub />
-        </span>
-        <span>
-          <SiLinkedin />
-        </span>
-        <span>
-          <AiOutlineMail />
-        </span>
+        {services.map((service, index) => (
+          <Tooltip
+            style={{
+              background: 'hsla(0, 0%, 0%, 0.95)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              padding: '0.5em 1em',
+            }}
+            key={index}
+            label={socialLinks[service].label}
+          >
+            <a
+              key={index}
+              sx={{
+                color: 'inherit',
+                transition: 'color 0.2s',
+                '&:hover': {
+                  color: socialLinks[service].color,
+                },
+              }}
+              href={socialLinks[service].link}
+            >
+              {socialLinks[service].icon}
+            </a>
+          </Tooltip>
+        ))}
       </div>
       <p>
         designed and built by <strong>matheus</strong>
