@@ -1,5 +1,9 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { navigate } from 'gatsby-link';
+import { techs } from '../utils/techIcons';
+import Tooltip from '@reach/tooltip';
+import '@reach/tooltip/styles.css';
 
 const typeColors = {
   trybe: 'green',
@@ -9,28 +13,40 @@ const typeColors = {
 function ProjectBrief({
   title,
   description,
+  slug = '',
   type = 'personal',
   techsList = [],
   ...props
 }) {
   return (
-    <div
+    <button
       {...props}
       sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'stretch',
         height: '100%',
         flex: 1,
         bg: 'offset',
         m: 1,
         p: 4,
+        pb: 3,
         borderRadius: '8px',
         border: '2px solid #E4E4E7',
+        transition: 'transform 0.2s',
+        '&:hover': {
+          transform: 'translateY(-5px)',
+          cursor: 'pointer',
+        },
       }}
+      onClick={() => navigate(`/projects/${slug}`)}
     >
       <h4
         sx={{
           fontFamily: 'heading',
           m: 0,
           fontSize: 4,
+          textAlign: 'left',
         }}
       >
         {title}
@@ -38,10 +54,12 @@ function ProjectBrief({
       <p
         sx={{
           fontWeight: 'light',
+          fontFamily: 'body',
+          textAlign: 'left',
+          fontSize: 1,
         }}
       >
-        A web app that connects to the CartolaFC api and allows the creation and
-        management of custom leagues.
+        {description}
       </p>
       <p
         sx={{
@@ -52,11 +70,47 @@ function ProjectBrief({
           py: 1,
           borderRadius: '8px',
           fontSize: 0,
+          m: 0,
+          fontFamily: 'body',
         }}
       >
         {`${type} project`}
       </p>
-    </div>
+      <div
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'flex-end',
+          gap: 2,
+          flexGrow: 1,
+        }}
+      >
+        {techsList.map((tech, index) => {
+          return (
+            <Tooltip
+              key={index}
+              style={{
+                background: 'hsla(0, 0%, 0%, 0.95)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                padding: '0.5em 1em',
+              }}
+              label={techs[tech].description}
+            >
+              <span
+                sx={{
+                  color: techs[tech].color,
+                  fontSize: 4,
+                }}
+              >
+                {techs[tech].icon}
+              </span>
+            </Tooltip>
+          );
+        })}
+      </div>
+    </button>
   );
 }
 

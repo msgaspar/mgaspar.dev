@@ -70,9 +70,25 @@ const IndexPage = () => {
             height: '300px',
           }}
         >
-          <ProjectBrief title="Zé Firula" type="personal" />
-          <ProjectBrief title="Trivia" type="trybe" />
-          <ProjectBrief title="Zé Firula" />
+          <ProjectBrief
+            title="Zé Firula"
+            description="A web app that connects to the CartolaFC official API and allows the creation and
+            management of custom leagues."
+            type="personal"
+            techsList={['typescript', 'react', 'nodejs', 'nextjs', 'postgres']}
+          />
+          <ProjectBrief
+            title="Trivia"
+            type="trybe"
+            description="A trivia game front-end app built on top of the Open Trivia DB API."
+            techsList={['javascript', 'react', 'redux']}
+          />
+          <ProjectBrief
+            title="mgaspar.dev"
+            description="This very website you are visiting right now."
+            type="personal"
+            techsList={['javascript', 'react', 'gatsby']}
+          />
         </div>
         <div
           className="styled-link"
@@ -125,7 +141,11 @@ const MainHeading = ({ heading, subheading, ...props }) => (
       </h2>
     </div>
     <div>
-      <StaticImage width={160} src="../images/profile.png" />
+      <StaticImage
+        width={160}
+        alt="My profile picture"
+        src="../images/profile.png"
+      />
     </div>
   </header>
 );
