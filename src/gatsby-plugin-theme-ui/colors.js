@@ -14,6 +14,11 @@ module.exports = {
     trybe: '#018353',
 
     badges: {
+      gray: {
+        color: '#3F3F46',
+        bg: '#F4F4F5',
+      },
+
       green: {
         color: '#22543D',
         bg: '#C6F6D5',

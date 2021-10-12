@@ -58,7 +58,7 @@ const IndexPage = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          my: 5,
+          my: 3,
         }}
       >
         <SectionTitle>Latest projects</SectionTitle>
@@ -67,7 +67,7 @@ const IndexPage = () => {
             display: 'flex',
             justifyContent: 'space-between',
             w: '100%',
-            height: '300px',
+            height: '340px',
           }}
         >
           <ProjectBrief
@@ -76,6 +76,7 @@ const IndexPage = () => {
             management of custom leagues."
             type="personal"
             techsList={['typescript', 'react', 'nodejs', 'nextjs', 'postgres']}
+            inProgress
           />
           <ProjectBrief
             title="Trivia"

@@ -1,6 +1,5 @@
 import React from 'react';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import { AiOutlineMail } from 'react-icons/ai';
 
 const socialLinks = {
   github: {

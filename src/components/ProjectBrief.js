@@ -15,6 +15,7 @@ function ProjectBrief({
   description,
   slug = '',
   type = 'personal',
+  inProgress = false,
   techsList = [],
   ...props
 }) {
@@ -76,6 +77,23 @@ function ProjectBrief({
       >
         {`${type} project`}
       </p>
+      {inProgress ? (
+        <p
+          sx={{
+            color: 'badges.gray.color',
+            bg: 'badges.gray.bg',
+            width: 'fit-content',
+            px: 2,
+            py: 1,
+            borderRadius: '8px',
+            fontSize: 0,
+            my: 1,
+            fontFamily: 'body',
+          }}
+        >
+          work in progress
+        </p>
+      ) : null}
       <div
         sx={{
           display: 'flex',
