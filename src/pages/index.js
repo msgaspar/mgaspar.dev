@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import { BsArrowRight } from 'react-icons/bs';
+import { ProjectBrief } from '../components/ProjectBrief';
 
 const IndexPage = () => {
   return (
@@ -69,9 +70,9 @@ const IndexPage = () => {
             height: '300px',
           }}
         >
-          <ProjectStub title="Zé Firula" />
-          <ProjectStub title="Trivia" />
-          <ProjectStub title="Recipes8" />
+          <ProjectBrief title="Zé Firula" type="personal" />
+          <ProjectBrief title="Trivia" type="trybe" />
+          <ProjectBrief title="Zé Firula" />
         </div>
         <div
           className="styled-link"
@@ -168,29 +169,6 @@ const SectionTitle = ({ children, ...props }) => (
   >
     {children}
   </h3>
-);
-
-const ProjectStub = ({ title, ...props }) => (
-  <div
-    sx={{
-      height: '100%',
-      flex: 1,
-      bg: 'offset',
-      m: 1,
-      p: 4,
-      borderRadius: '8px',
-    }}
-  >
-    <h4
-      sx={{
-        fontFamily: 'heading',
-        m: 0,
-        fontSize: 4,
-      }}
-    >
-      {title}
-    </h4>
-  </div>
 );
 
 export default IndexPage;
