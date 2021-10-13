@@ -8,13 +8,25 @@ import {
   SiJavascript,
   SiGatsby,
   SiRedux,
+  SiGit,
 } from 'react-icons/si';
+import { FiDatabase } from 'react-icons/fi';
+import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 
 const techs = {
+  database: {
+    color: 'muted',
+    icon: <FiDatabase />,
+  },
   gatsby: {
     description: 'Gatsby',
     color: '#663399',
     icon: <SiGatsby />,
+  },
+  git: {
+    description: 'Git',
+    color: '#F05032',
+    icon: <SiGit />,
   },
   javascript: {
     description: 'JavaScript',
@@ -30,6 +42,10 @@ const techs = {
     description: 'Node.js',
     color: '#339933',
     icon: <SiNodedotjs />,
+  },
+  project: {
+    color: 'muted',
+    icon: <AiOutlineFundProjectionScreen />,
   },
   postgres: {
     description: 'PostgreSQL',
