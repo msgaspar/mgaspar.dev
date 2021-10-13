@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { ProjectBrief } from '../components/ProjectBrief';
-
+import { Helmet } from 'react-helmet';
 import Layout from '../components/Layout';
 import {
   PageSection,
@@ -14,6 +14,9 @@ import { SocialLinksBar } from '../components/SocialLinksBar';
 function ProjectsPage() {
   return (
     <Layout>
+      <Helmet>
+        <title>Projects - Matheus Gaspar</title>
+      </Helmet>
       <PageSection>
         <SectionTitle>Personal and side projects</SectionTitle>
         <TextContent>

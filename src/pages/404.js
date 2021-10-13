@@ -2,11 +2,14 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import { PageSection, SectionTitle, TextContent } from '../components/lib';
+import { Helmet } from 'react-helmet';
 
 function NotFoundPage() {
   return (
     <Layout>
-      <title>Not found</title>
+      <Helmet>
+        <title>Not found - Matheus Gaspar</title>
+      </Helmet>
       <PageSection>
         <SectionTitle>Oops! Page not found 😔</SectionTitle>
         <TextContent>

@@ -18,7 +18,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Matheus Gaspar - Web Developer</title>
+        <title>Matheus Gaspar - web developer</title>
       </Helmet>
       <MainHeading
         heading="Matheus Gaspar"

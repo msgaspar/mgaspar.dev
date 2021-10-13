@@ -1,6 +1,6 @@
 /**@jsx jsx */
 import { jsx } from 'theme-ui';
-
+import { Helmet } from 'react-helmet';
 import Layout from '../components/Layout';
 import { PageSection, SectionTitle, TextContent } from '../components/lib';
 import { socialLinks } from '../utils/socialLinks';
@@ -8,6 +8,9 @@ import { socialLinks } from '../utils/socialLinks';
 function ContactPage() {
   return (
     <Layout>
+      <Helmet>
+        <title>Contact - Matheus Gaspar</title>
+      </Helmet>
       <PageSection>
         <SectionTitle>Get in touch</SectionTitle>
         <TextContent sx={{ maxWidth: '500px' }}>

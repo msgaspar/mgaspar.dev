@@ -1,11 +1,17 @@
 /** @jsx jsx */
+import { Helmet } from 'react-helmet';
 import { jsx } from 'theme-ui';
 import { Footer } from './Footer';
 import { Header } from './Header';
+import favicon from '../images/favicon.ico';
 
 function Layout({ children }) {
   return (
     <ContainerLayout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Header sx={{ mt: 3, mb: 0 }} />
       <BodyLayout>
         <Content>{children}</Content>
