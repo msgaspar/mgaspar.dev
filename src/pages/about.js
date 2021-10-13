@@ -77,7 +77,7 @@ function AboutPage() {
               authentication, software architecture and SOLID principles
             </SkillsListItem>
             <SkillsListItem iconName="project">
-              <strong>Organisational and communication</strong> skills - project
+              <strong>Organisational and communication skills</strong> - project
               planning and management, agile methodologies, breaking big tasks
               into achievable pieces, clear and assertive communication (written
               and verbal)
