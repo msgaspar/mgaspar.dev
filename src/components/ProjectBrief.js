@@ -83,8 +83,8 @@ function ProjectBrief({
       {inProgress ? (
         <p
           sx={{
-            color: 'badges.gray.color',
-            bg: 'badges.gray.bg',
+            color: 'badges.purple.color',
+            bg: 'badges.purple.bg',
             width: 'fit-content',
             px: 2,
             py: 1,
