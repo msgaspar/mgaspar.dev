@@ -11,6 +11,7 @@ import {
   TextContent,
   TrybeLink,
 } from '../components/lib';
+import { SocialLinksBar } from '../components/SocialLinksBar';
 
 const IndexPage = () => {
   return (
@@ -98,6 +99,7 @@ const IndexPage = () => {
           </Link>
         </div>
       </PageSection>
+      <SocialLinksBar />
     </Layout>
   );
 };

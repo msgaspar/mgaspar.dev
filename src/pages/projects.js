@@ -9,6 +9,7 @@ import {
   TextContent,
   TrybeLink,
 } from '../components/lib';
+import { SocialLinksBar } from '../components/SocialLinksBar';
 
 function ProjectsPage() {
   return (
@@ -67,6 +68,7 @@ function ProjectsPage() {
           />
         </div>
       </PageSection>
+      <SocialLinksBar />
     </Layout>
   );
 }

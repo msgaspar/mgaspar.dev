@@ -4,6 +4,7 @@ import { jsx } from 'theme-ui';
 
 import Layout from '../components/Layout';
 import { PageSection, SectionTitle, TextContent } from '../components/lib';
+import { SocialLinksBar } from '../components/SocialLinksBar';
 import { techs } from '../utils/techIcons';
 
 function AboutPage() {
@@ -85,6 +86,7 @@ function AboutPage() {
           </SkillsList>
         </TextContent>
       </PageSection>
+      <SocialLinksBar />
     </Layout>
   );
 }
