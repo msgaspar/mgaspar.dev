@@ -37,24 +37,10 @@ const IndexPage = () => {
             <TrybeLink />, with focus on <strong>JavaScript</strong>,{' '}
             <strong>React</strong> and <strong>Node.js</strong>.
           </p>
-          {/* <p>
-            I am fascinated about how computers can make our lives easier, solve
-            annoying problems and even help us build great habits. They can also
-            provide us beautiful and life-changing experiences! And one of the
-            things I enjoy the most is making these things happen. When I'm not
-            coding or studying, you'll probably find me cooking, enjoying
-            nature, traveling or spending some time with family and friends.
-            Always with a good cup a coffee.
-          </p> */}
-          {/* <p>
-            It's been one year since I left Civil Engineering to dive deep into
-            the world of software, and it's just the beginning of an amazing
-            journey.
-          </p> */}
           <p>
             This is my personal spot in the internet - you can learn more{' '}
-            <a href="/#">about me</a> or check what I've been{' '}
-            <a href="/#">working on</a> recently.
+            <Link to="/about">about me</Link> or check what I've been{' '}
+            <Link to="/projects">working on</Link> recently.
           </p>
         </TextContent>
       </section>
