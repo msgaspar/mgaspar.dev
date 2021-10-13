@@ -23,7 +23,7 @@ export const SectionTitle = ({ children, ...props }) => (
       fontSize: 5,
       fontWeight: 'extra',
       m: 0,
-      pt: 4,
+      pt: 2,
     }}
   >
     {children}
@@ -35,12 +35,19 @@ export const TextContent = ({ children, ...props }) => (
     {...props}
     sx={{
       p: {
-        fontFamily: 'body',
         fontWeight: 'light',
         fontSize: 3,
         lineHeight: 'body',
         strong: {
           fontWeight: 'semi',
+        },
+      },
+      li: {
+        fontWeight: 'light',
+        fontSize: 2,
+        lineHeight: 'body',
+        '& + li': {
+          pt: 3,
         },
       },
     }}
