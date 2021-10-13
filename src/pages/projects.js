@@ -14,7 +14,7 @@ function ProjectsPage() {
   return (
     <Layout>
       <PageSection>
-        <SectionTitle>Personal projects</SectionTitle>
+        <SectionTitle>Personal and side projects</SectionTitle>
         <TextContent>
           <p>
             I try to spend some of my free time building stuff that is simple,

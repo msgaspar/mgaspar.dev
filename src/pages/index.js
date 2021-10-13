@@ -94,7 +94,7 @@ const IndexPage = () => {
           }}
         >
           <Link to="/projects">
-            Check all projects <BsArrowRight />
+            View all projects <BsArrowRight />
           </Link>
         </div>
       </PageSection>
@@ -143,32 +143,6 @@ const MainHeading = ({ heading, subheading, ...props }) => (
       />
     </div>
   </header>
-);
-
-const IntroText = ({ children, ...props }) => (
-  <section
-    {...props}
-    sx={{
-      py: 2,
-      p: {
-        fontFamily: 'body',
-        fontWeight: 'light',
-        fontSize: 3,
-        lineHeight: 'body',
-
-        strong: {
-          fontWeight: 'semi',
-        },
-
-        '.trybe': {
-          fontWeight: 'semi',
-          color: 'trybe',
-        },
-      },
-    }}
-  >
-    {children}
-  </section>
 );
 
 export default IndexPage;
