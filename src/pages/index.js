@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
@@ -16,6 +17,9 @@ import { SocialLinksBar } from '../components/SocialLinksBar';
 const IndexPage = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Matheus Gaspar - Web Developer</title>
+      </Helmet>
       <MainHeading
         heading="Matheus Gaspar"
         subheading="Full-stack web developer"
