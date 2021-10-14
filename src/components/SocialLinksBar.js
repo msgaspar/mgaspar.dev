@@ -39,6 +39,7 @@ function SocialLinksBar() {
               },
             }}
             href={socialLinks[service].link}
+            target="_blank"
           >
             {socialLinks[service].icon}
           </a>
