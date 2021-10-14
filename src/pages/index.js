@@ -130,6 +130,7 @@ const MainHeading = ({ heading, subheading, ...props }) => (
     <div>
       <StaticImage
         width={160}
+        placeholder="blurred"
         alt="My profile picture"
         src="../images/profile.png"
       />

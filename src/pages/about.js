@@ -41,6 +41,7 @@ function AboutPage() {
           <StaticImage
             src="../images/matheus.jpg"
             height={300}
+            placeholder="blurred"
             sx={{
               borderRadius: '8px',
               flexShrink: 0,
