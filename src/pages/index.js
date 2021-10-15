@@ -28,7 +28,7 @@ const IndexPage = () => {
         }}
       />
 
-      <section>
+      <section sx={{ mb: 4 }}>
         <TextContent sx={{ py: 2 }}>
           <p>
             I'm a 29-year-old engineer from Brazil, taking the first steps in my
@@ -52,7 +52,7 @@ const IndexPage = () => {
             display: 'flex',
             justifyContent: 'space-between',
             w: '100%',
-            pt: 3,
+            pt: 4,
           }}
         >
           <ProjectBrief
@@ -131,7 +131,7 @@ const MainHeading = ({ heading, subheading, ...props }) => (
       <StaticImage
         width={160}
         placeholder="blurred"
-        alt="My profile picture"
+        alt="Matheus Gaspar"
         src="../images/profile.png"
       />
     </div>
