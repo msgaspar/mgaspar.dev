@@ -20,7 +20,7 @@ export const SectionTitle = ({ children, ...props }) => (
     sx={{
       fontFamily: 'heading',
       letterSpacing: -0.4,
-      fontSize: 5,
+      fontSize: 6,
       fontWeight: 'extra',
       m: 0,
       pt: 2,
