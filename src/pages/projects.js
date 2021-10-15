@@ -22,8 +22,8 @@ function ProjectsPage() {
         <TextContent>
           <p>
             I try to spend some of my free time building stuff that is simple,
-            but can be very useful - for me or someone else. Also a great way to
-            practice the things I've been learning.
+            but can be very useful - for me or someone else. It's also a great
+            way to practice the things I've been studying and learning.
           </p>
         </TextContent>
         <div
@@ -48,7 +48,12 @@ function ProjectsPage() {
         </div>
       </PageSection>
 
-      <PageSection>
+      <PageSection
+        sx={{
+          mt: 5,
+          mb: 6,
+        }}
+      >
         <SectionTitle>Trybe projects</SectionTitle>
         <TextContent>
           <p>
