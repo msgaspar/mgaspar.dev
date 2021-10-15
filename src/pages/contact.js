@@ -13,7 +13,7 @@ function ContactPage() {
       </Helmet>
       <PageSection>
         <SectionTitle>Get in touch</SectionTitle>
-        <TextContent sx={{ maxWidth: '500px' }}>
+        <TextContent>
           <p>
             Send me an email if you're looking for a developer, if you have any
             questions, or if you just want to say hi.
