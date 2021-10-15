@@ -3,7 +3,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { jsx } from 'theme-ui';
 import { Helmet } from 'react-helmet';
 import Layout from '../components/Layout';
-import { PageSection, SectionTitle, TextContent } from '../components/lib';
+import {
+  PageSection,
+  SectionTitle,
+  TextContent,
+  TrybeLink,
+} from '../components/lib';
 import { SocialLinksBar } from '../components/SocialLinksBar';
 import { techs } from '../utils/techIcons';
 
@@ -22,20 +27,29 @@ function AboutPage() {
             alignItems: 'flex-start',
           }}
         >
-          <TextContent>
+          <TextContent sx={{ p: { fontSize: 2 } }}>
             <p>
-              I am fascinated about how computers can make our lives easier,
-              solve annoying problems and even help us build great habits. They
-              can also provide us beautiful and life-changing experiences! And
-              one of the things I enjoy the most is making these things happen.
-              When I'm not coding or studying, you'll probably find me cooking,
-              enjoying nature, traveling or spending some time with family and
-              friends. Always with a good cup a coffee.
+              Hey, it's nice to have you here! I'm Matheus, a brazilian web
+              developer who's fascinated about how technology can make our lives
+              easier, solve annoying problems and help making the world a better
+              place. And one of the things I enjoy the most is being able to
+              make these things happen by building quality software. I also love
+              enjoying nature, traveling, cooking, reading a good book and
+              spending time with my family and friends.
             </p>
             <p>
-              It's been one year since I left Civil Engineering to dive deep
-              into the world of software, and it's just the beginning of an
-              amazing journey.
+              I graduated in Civil Engineering in 2016 and earned a master's
+              degree in Transportation Engineering in 2019, both at the
+              University of São Paulo. During those years I dedicated myself to
+              scientific research, and soon after that I decided on a career
+              change to work with something I really enjoyed - programming.
+            </p>
+            <p>
+              I'm currently studying for a degree in System Analysis and
+              Development at the Senac University Center, and entering the final
+              module of the web development course at <TrybeLink />. I'm also
+              looking for my first developer job opportunity. It's just the
+              beginning of an amazing journey.
             </p>
           </TextContent>
           <StaticImage
@@ -45,7 +59,8 @@ function AboutPage() {
             sx={{
               borderRadius: '8px',
               flexShrink: 0,
-              ml: 4,
+              ml: 5,
+              mr: -5,
               mt: 4,
             }}
           />
