@@ -1,24 +1,20 @@
 module.exports = {
   colors: {
-    background: '#FFF',
-    offset: '#FAFAFA',
-    lightGray: '#e4e4e7',
-    text: '#000',
-    heading: '#000',
+    background: '#fff',
     muted: '#8a91a0',
+    text: '#000',
+    trybe: '#018353',
+    link: '#f83735',
+    hoverLink: '#DD6B20',
+    offset: '#FAFAFA',
+    offsetBorder: '#e4e4e7',
+
+    heading: '#000',
     primary: '#553C9A',
     primaryOffset: '#E9D8FD',
     secondary: '#306',
-    link: '#f83735',
-    hoverLink: '#DD6B20',
-    trybe: '#018353',
 
     badges: {
-      gray: {
-        color: '#3F3F46',
-        bg: '#F4F4F5',
-      },
-
       green: {
         color: '#22543D',
         bg: '#C6F6D5',
@@ -34,9 +30,28 @@ module.exports = {
     },
   },
   darkModeColors: {
+    background: '#171717',
     text: '#f8f8f2',
-    background: '#121212',
-    heading: '#f8f8f2',
     muted: '#b3b3b3',
+    trybe: '#00ad6d',
+    link: '#ff6765',
+    hoverLink: '#f7ba49',
+    offset: '#121212',
+    offsetBorder: '#0f0f0f',
+
+    badges: {
+      green: {
+        color: '#9ae6b4',
+        bg: '#9ae6b429',
+      },
+      orange: {
+        color: '#FDE68A',
+        bg: '#FDE68A29',
+      },
+      purple: {
+        color: '#E9D5FF',
+        bg: '#d6bcfa29',
+      },
+    },
   },
 };

@@ -23,6 +23,7 @@ function ProjectBrief({
     <button
       {...props}
       sx={{
+        color: 'text',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'stretch',
@@ -34,7 +35,8 @@ function ProjectBrief({
         p: 4,
         pb: 3,
         borderRadius: '8px',
-        border: '2px solid #E4E4E7',
+        border: '2px solid',
+        borderColor: 'offsetBorder',
         transition: 'transform 0.2s',
         '&:hover': {
           transform: 'translateY(-5px)',
