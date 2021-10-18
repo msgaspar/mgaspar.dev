@@ -2,14 +2,9 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import { jsx } from 'theme-ui';
 import { Helmet } from 'react-helmet';
-import Layout from '../components/Layout';
-import {
-  PageSection,
-  SectionTitle,
-  TextContent,
-  TrybeLink,
-} from '../components/lib';
-import { SocialLinksBar } from '../components/SocialLinksBar';
+import Layout from '../components/layout';
+import { TrybeLink } from '../components/trybeLink';
+import { SocialIconsBar } from '../components/socialIconsBar';
 import { techs } from '../utils/techIcons';
 
 function AboutPage() {
@@ -18,8 +13,8 @@ function AboutPage() {
       <Helmet>
         <title>About me - Matheus Gaspar</title>
       </Helmet>
-      <PageSection>
-        <SectionTitle>About me</SectionTitle>
+      <section>
+        <h2>About me</h2>
         <div
           sx={{
             display: 'flex',
@@ -27,7 +22,18 @@ function AboutPage() {
             alignItems: 'flex-start',
           }}
         >
-          <TextContent sx={{ p: { fontSize: 2 } }}>
+          <div
+            sx={{
+              p: {
+                fontWeight: 'light',
+                fontSize: 2,
+                lineHeight: 'body',
+                strong: {
+                  fontWeight: 'semi',
+                },
+              },
+            }}
+          >
             <p>
               Hey, it's nice to have you here! I'm Matheus, a brazilian web
               developer who's fascinated about how technology can make our lives
@@ -52,7 +58,7 @@ function AboutPage() {
               also looking for my first developer job opportunity, and I feel
               this is just the beginning of an amazing journey.
             </p>
-          </TextContent>
+          </div>
           <StaticImage
             src="../images/matheus.jpg"
             height={300}
@@ -66,47 +72,43 @@ function AboutPage() {
             }}
           />
         </div>
-      </PageSection>
-      <PageSection>
-        <SectionTitle>Skills</SectionTitle>
-        <TextContent>
-          <p>
-            These are the main skills I've been praticing and developing
-            recently:
-          </p>
-          <SkillsList>
-            <SkillsListItem iconName="git">
-              <strong>Version control with Git</strong> - workflow for
-              collaboration on GitHub
-            </SkillsListItem>
-            <SkillsListItem iconName="javascript">
-              <strong>Javascript (ES6+)</strong> - DOM manipulation,
-              asynchronous programming, unit testing with Jest
-            </SkillsListItem>
-            <SkillsListItem iconName="react">
-              <strong>React</strong> - Hooks, Context API, state management with
-              Redux, Jamstack (with Next.js and Gatsby), CSS-in-JS frameworks
-              (Emotion and Styled Components), testing with React Testing
-              Library
-            </SkillsListItem>
-            <SkillsListItem iconName="database">
-              <strong>Relational and noSQL Databases</strong> - MySQL,
-              PostgreSQL and MongoDB
-            </SkillsListItem>
-            <SkillsListItem iconName="nodejs">
-              <strong>Node.js</strong> - REST APIs with Express, JWT
-              authentication, software architecture and SOLID principles
-            </SkillsListItem>
-            <SkillsListItem iconName="project">
-              <strong>Organisational and communication skills</strong> - project
-              planning and management, agile methodologies, breaking big tasks
-              into achievable pieces, clear and assertive communication (written
-              and verbal)
-            </SkillsListItem>
-          </SkillsList>
-        </TextContent>
-      </PageSection>
-      <SocialLinksBar />
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <p>
+          These are the main skills I've been praticing and developing recently:
+        </p>
+        <SkillsList>
+          <SkillsListItem iconName="git">
+            <strong>Version control with Git</strong> - workflow for
+            collaboration on GitHub
+          </SkillsListItem>
+          <SkillsListItem iconName="javascript">
+            <strong>Javascript (ES6+)</strong> - DOM manipulation, asynchronous
+            programming, unit testing with Jest
+          </SkillsListItem>
+          <SkillsListItem iconName="react">
+            <strong>React</strong> - Hooks, Context API, state management with
+            Redux, Jamstack (with Next.js and Gatsby), CSS-in-JS frameworks
+            (Emotion and Styled Components), testing with React Testing Library
+          </SkillsListItem>
+          <SkillsListItem iconName="database">
+            <strong>Relational and noSQL Databases</strong> - MySQL, PostgreSQL
+            and MongoDB
+          </SkillsListItem>
+          <SkillsListItem iconName="nodejs">
+            <strong>Node.js</strong> - REST APIs with Express, JWT
+            authentication, software architecture and SOLID principles
+          </SkillsListItem>
+          <SkillsListItem iconName="project">
+            <strong>Organisational and communication skills</strong> - project
+            planning and management, agile methodologies, breaking big tasks
+            into achievable pieces, clear and assertive communication (written
+            and verbal)
+          </SkillsListItem>
+        </SkillsList>
+      </section>
+      <SocialIconsBar />
     </Layout>
   );
 }

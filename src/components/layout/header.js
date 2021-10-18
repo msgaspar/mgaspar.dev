@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import ColorModeToggle from './ColorModeToggle';
-import { Navbar } from './Navbar';
+import ColorModeToggle from './colorModeToggle';
+import { Navbar } from './navbar';
 
 function Header(props) {
   return (

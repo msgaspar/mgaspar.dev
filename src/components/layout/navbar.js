@@ -31,10 +31,10 @@ const NavLink = ({ to, title }) => (
     sx={{
       '> a': {
         textDecoration: 'none',
-        color: t => t.colors.muted,
-        fontFamily: t => t.fonts.body,
-        fontSize: t => t.fontSizes[2],
-        fontWeight: t => t.fontWeights.regular,
+        color: 'muted',
+        fontFamily: 'body',
+        fontSize: 2,
+        fontWeight: 'regular',
         transition: 'color 0.2s',
         '&:hover': {
           color: 'text',

@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { Helmet } from 'react-helmet';
 import { jsx } from 'theme-ui';
-import { Footer } from './Footer';
-import { Header } from './Header';
-import favicon from '../images/favicon.ico';
+import { Footer } from './footer';
+import { Header } from './header';
+import favicon from '../../images/favicon.ico';
 
 function Layout({ children }) {
   return (
-    <ContainerLayout>
+    <Container>
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="icon" href={favicon} />
@@ -17,11 +17,11 @@ function Layout({ children }) {
         <Content>{children}</Content>
       </BodyLayout>
       <Footer />
-    </ContainerLayout>
+    </Container>
   );
 }
 
-const ContainerLayout = ({ children }) => (
+const Container = ({ children }) => (
   <div
     sx={{
       display: 'flex',
@@ -29,9 +29,8 @@ const ContainerLayout = ({ children }) => (
       alignItems: 'center',
       width: 'fit-content',
       minHeight: '100%',
-      backgroundColor: t => t.colors.background,
+      backgroundColor: 'background',
       mx: 'auto',
-      boxShadow: t => t.colors.bgShadow,
     }}
   >
     {children}
@@ -56,6 +55,44 @@ const Content = ({ children }) => (
   <main
     sx={{
       flex: 1,
+
+      section: {
+        display: 'flex',
+        flexDirection: 'column',
+        my: 3,
+
+        '& + section': {
+          mt: 4,
+        },
+
+        h2: {
+          fontFamily: 'heading',
+          letterSpacing: -0.4,
+          fontSize: 6,
+          fontWeight: 'extra',
+          m: 0,
+          mt: 3,
+          pt: 2,
+        },
+
+        '> p': {
+          fontWeight: 'light',
+          fontSize: 3,
+          lineHeight: 'body',
+          strong: {
+            fontWeight: 'semi',
+          },
+        },
+
+        li: {
+          fontWeight: 'light',
+          fontSize: 2,
+          lineHeight: 'body',
+          '& + li': {
+            pt: 3,
+          },
+        },
+      },
     }}
   >
     {children}

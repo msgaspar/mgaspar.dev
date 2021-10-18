@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import Layout from '../components/Layout';
-import { PageSection, SectionTitle, TextContent } from '../components/lib';
+import Layout from '../components/layout';
 import { Helmet } from 'react-helmet';
 
 function NotFoundPage() {
@@ -10,14 +9,12 @@ function NotFoundPage() {
       <Helmet>
         <title>Not found - Matheus Gaspar</title>
       </Helmet>
-      <PageSection>
-        <SectionTitle>Oops! Page not found 😔</SectionTitle>
-        <TextContent>
-          <p>
-            <Link to="/">Go home</Link>
-          </p>
-        </TextContent>
-      </PageSection>
+      <section>
+        <h2>Oops! Page not found 😔</h2>
+        <p>
+          <Link to="/">Go home</Link>
+        </p>
+      </section>
     </Layout>
   );
 }

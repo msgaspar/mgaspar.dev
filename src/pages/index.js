@@ -3,16 +3,11 @@ import { jsx } from 'theme-ui';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import { BsArrowRight } from 'react-icons/bs';
-import { ProjectBrief } from '../components/ProjectBrief';
-import {
-  PageSection,
-  SectionTitle,
-  TextContent,
-  TrybeLink,
-} from '../components/lib';
-import { SocialLinksBar } from '../components/SocialLinksBar';
+import { ProjectCard } from '../components/projectCard';
+import { TrybeLink } from '../components/trybeLink';
+import { SocialIconsBar } from '../components/socialIconsBar';
 
 const IndexPage = () => {
   return (
@@ -29,24 +24,22 @@ const IndexPage = () => {
       />
 
       <section sx={{ mb: 4 }}>
-        <TextContent sx={{ py: 2 }}>
-          <p>
-            I'm a 29-year-old engineer from Brazil, taking the first steps in my
-            career as a <strong>software developer</strong>. Currently, I'm
-            studying front and back-end web development at the awesome school{' '}
-            <TrybeLink />, with focus on <strong>JavaScript</strong>,{' '}
-            <strong>React</strong> and <strong>Node.js</strong>.
-          </p>
-          <p>
-            This is my personal spot in the internet - you can learn more{' '}
-            <Link to="/about">about me</Link> or check what I've been{' '}
-            <Link to="/projects">working on</Link> recently.
-          </p>
-        </TextContent>
+        <p>
+          I'm a 29-year-old engineer from Brazil, taking the first steps in my
+          career as a <strong>software developer</strong>. Currently, I'm
+          studying front and back-end web development at the awesome school{' '}
+          <TrybeLink />, with focus on <strong>JavaScript</strong>,{' '}
+          <strong>React</strong> and <strong>Node.js</strong>.
+        </p>
+        <p>
+          This is my personal spot in the internet - you can learn more{' '}
+          <Link to="/about">about me</Link> or check what I've been{' '}
+          <Link to="/projects">working on</Link> recently.
+        </p>
       </section>
 
-      <PageSection>
-        <SectionTitle>Latest projects</SectionTitle>
+      <section>
+        <h2>Latest projects</h2>
         <div
           sx={{
             display: 'flex',
@@ -55,7 +48,7 @@ const IndexPage = () => {
             pt: 4,
           }}
         >
-          <ProjectBrief
+          <ProjectCard
             title="Zé Firula"
             description="A web app that connects to the CartolaFC official API and allows the creation and
             management of custom leagues."
@@ -63,13 +56,13 @@ const IndexPage = () => {
             techsList={['typescript', 'react', 'nodejs', 'nextjs', 'postgres']}
             inProgress
           />
-          <ProjectBrief
+          <ProjectCard
             title="Trivia"
             type="trybe"
             description="A trivia game front-end app built on top of the Open Trivia DB API."
             techsList={['javascript', 'react', 'redux']}
           />
-          <ProjectBrief
+          <ProjectCard
             title="mgaspar.dev"
             description="This very website you are visiting right now."
             type="personal"
@@ -77,7 +70,6 @@ const IndexPage = () => {
           />
         </div>
         <div
-          className="styled-link"
           sx={{
             my: 4,
             fontFamily: 'body',
@@ -88,8 +80,8 @@ const IndexPage = () => {
             View all projects <BsArrowRight />
           </Link>
         </div>
-      </PageSection>
-      <SocialLinksBar />
+      </section>
+      <SocialIconsBar />
     </Layout>
   );
 };

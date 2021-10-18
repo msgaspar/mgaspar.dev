@@ -29,7 +29,7 @@ const ColorModeButton = ({ children, onClick, isDark }) => (
     aria-label={isDark ? 'Activate Light Mode' : 'Activate Dark Mode'}
     title={isDark ? 'Activate Light Mode' : 'Activate Dark Mode'}
     sx={{
-      opacity: 0.65,
+      opacity: 0.45,
       position: 'relative',
       borderRadius: '5px',
       width: '40px',
@@ -44,7 +44,7 @@ const ColorModeButton = ({ children, onClick, isDark }) => (
       cursor: 'pointer',
       padding: 0,
       appearance: 'none',
-      '&:hover, &:focus': { opacity: 1 },
+      '&:hover': { opacity: 1 },
     }}
   >
     {children}
@@ -58,13 +58,13 @@ const SunOrMoon = ({ isDark }) => (
       width: '24px',
       height: '24px',
       borderRadius: '50%',
-      border: t => (isDark ? `4px solid ${t.colors.muted}` : `none`),
-      backgroundColor: isDark ? 'muted' : 'transparent',
+      border: isDark ? '4px solid' : 'none',
+      color: 'text',
+      backgroundColor: isDark ? 'text' : 'transparent',
       transform: isDark ? 'scale(0.55)' : 'scale(1)',
       transition: 'all 0.45s ease',
       overflow: isDark ? 'visible' : 'hidden',
-      boxShadow: t =>
-        isDark ? 'none' : `inset 8px -8px 0px 0px ${t.colors.muted}`,
+      boxShadow: isDark ? 'none' : 'inset 8px -8px 0px 0px',
 
       '&:before': {
         content: '""',
@@ -73,7 +73,8 @@ const SunOrMoon = ({ isDark }) => (
         top: '-9px',
         height: '24px',
         width: '24px',
-        border: t => (isDark ? `2px solid ${t.colors.muted}` : 'none'),
+        border: isDark ? '2px solid' : 'none',
+        borderColor: 'text',
         borderRadius: '50%',
         transform: isDark ? 'translate(14px, -14px)' : 'translate(0, 0)',
         opacity: isDark ? 0 : 1,
@@ -89,8 +90,9 @@ const SunOrMoon = ({ isDark }) => (
         position: 'absolute',
         top: '50%',
         left: '50%',
-        boxShadow: t =>
-          `0 -23px 0 ${t.colors.muted}, 0 23px 0 ${t.colors.muted}, 23px 0 0 ${t.colors.muted}, -23px 0 0 ${t.colors.muted}, 15px 15px 0 ${t.colors.muted}, -15px 15px 0 ${t.colors.muted}, 15px -15px 0 ${t.colors.muted}, -15px -15px 0 ${t.colors.muted}`,
+        boxShadow:
+          '0 -23px 0, 0 23px 0, 23px 0 0, -23px 0 0, 15px 15px 0, -15px 15px 0, 15px -15px 0, -15px -15px 0',
+        color: 'text',
         transform: isDark ? 'scale(1)' : 'scale(0)',
         transition: 'all 0.35s ease',
       },

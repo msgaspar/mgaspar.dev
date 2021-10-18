@@ -1,10 +1,10 @@
 /**@jsx jsx */
 import { jsx } from 'theme-ui';
 
-import Tooltip from '@reach/tooltip';
+import { Tooltip } from '../components/tooltip';
 import { socialLinks } from '../utils/socialLinks';
 
-function SocialLinksBar() {
+function SocialIconsBar() {
   const services = ['github', 'linkedin'];
   return (
     <aside
@@ -18,17 +18,7 @@ function SocialLinksBar() {
       }}
     >
       {services.map((service, index) => (
-        <Tooltip
-          style={{
-            background: 'hsla(0, 0%, 0%, 0.95)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            padding: '0.5em 1em',
-          }}
-          key={index}
-          label={socialLinks[service].label}
-        >
+        <Tooltip key={index} label={socialLinks[service].label}>
           <a
             key={index}
             sx={{
@@ -40,6 +30,7 @@ function SocialLinksBar() {
             }}
             href={socialLinks[service].link}
             target="_blank"
+            rel="noreferrer"
           >
             {socialLinks[service].icon}
           </a>
@@ -49,4 +40,4 @@ function SocialLinksBar() {
   );
 }
 
-export { SocialLinksBar };
+export { SocialIconsBar };
