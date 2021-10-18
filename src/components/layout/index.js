@@ -71,8 +71,8 @@ const Content = ({ children }) => (
           fontSize: 6,
           fontWeight: 'extra',
           m: 0,
-          mt: 3,
           pt: 2,
+          pb: 3,
         },
 
         '> p': {
@@ -82,6 +82,8 @@ const Content = ({ children }) => (
           strong: {
             fontWeight: 'semi',
           },
+          mt: 2,
+          mb: 3,
         },
 
         li: {

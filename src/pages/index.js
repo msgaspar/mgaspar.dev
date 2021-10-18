@@ -45,7 +45,6 @@ const IndexPage = () => {
             display: 'flex',
             justifyContent: 'space-between',
             w: '100%',
-            pt: 4,
           }}
         >
           <ProjectCard
