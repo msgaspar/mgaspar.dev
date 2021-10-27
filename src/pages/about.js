@@ -4,12 +4,11 @@ import { jsx } from 'theme-ui';
 import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import { TrybeLink } from '../components/trybeLink';
-import { SocialIconsBar } from '../components/socialIconsBar';
 import { techs } from '../utils/techIcons';
 
 function AboutPage() {
   return (
-    <Layout>
+    <Layout showSocialIcons>
       <Helmet>
         <title>About me - Matheus Gaspar</title>
       </Helmet>
@@ -108,7 +107,6 @@ function AboutPage() {
           </SkillsListItem>
         </SkillsList>
       </section>
-      <SocialIconsBar />
     </Layout>
   );
 }

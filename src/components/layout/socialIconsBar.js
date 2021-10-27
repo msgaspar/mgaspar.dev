@@ -1,8 +1,8 @@
 /**@jsx jsx */
 import { jsx } from 'theme-ui';
 
-import { Tooltip } from '../components/tooltip';
-import { socialLinks } from '../utils/socialLinks';
+import { Tooltip } from '../tooltip';
+import { socialLinks } from '../../utils/socialLinks';
 
 function SocialIconsBar() {
   const services = ['github', 'linkedin'];

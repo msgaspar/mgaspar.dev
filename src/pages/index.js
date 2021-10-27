@@ -7,11 +7,10 @@ import Layout from '../components/layout';
 import { BsArrowRight } from 'react-icons/bs';
 import { ProjectCard } from '../components/projectCard';
 import { TrybeLink } from '../components/trybeLink';
-import { SocialIconsBar } from '../components/socialIconsBar';
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout showSocialIcons>
       <Helmet>
         <title>Matheus Gaspar - web developer</title>
       </Helmet>
@@ -80,7 +79,6 @@ const IndexPage = () => {
           </Link>
         </div>
       </section>
-      <SocialIconsBar />
     </Layout>
   );
 };

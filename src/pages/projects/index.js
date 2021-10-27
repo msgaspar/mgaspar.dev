@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { ProjectCard } from '../components/projectCard';
+import { ProjectCard } from '../../components/projectCard';
 import { Helmet } from 'react-helmet';
-import Layout from '../components/layout';
-import { TrybeLink } from '../components/trybeLink';
-import { SocialIconsBar } from '../components/socialIconsBar';
+import Layout from '../../components/layout';
+import { TrybeLink } from '../../components/trybeLink';
 
 function ProjectsPage() {
   return (
-    <Layout>
+    <Layout showSocialIcons>
       <Helmet>
         <title>Projects - Matheus Gaspar</title>
       </Helmet>
@@ -62,12 +61,12 @@ function ProjectsPage() {
         >
           <ProjectCard
             title="Trivia"
+            slug="trivia-game"
             description="A trivia game front-end app built on top of the Open Trivia DB API."
             techsList={['javascript', 'react', 'redux']}
           />
         </div>
       </section>
-      <SocialIconsBar />
     </Layout>
   );
 }

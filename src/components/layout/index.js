@@ -5,7 +5,7 @@ import { Footer } from './footer';
 import { Header } from './header';
 import favicon from '../../images/favicon.ico';
 
-function Layout({ children }) {
+function Layout({ showSocialIcons, children }) {
   return (
     <Container>
       <Helmet>
@@ -16,7 +16,7 @@ function Layout({ children }) {
       <BodyLayout>
         <Content>{children}</Content>
       </BodyLayout>
-      <Footer />
+      <Footer showSocialIcons={showSocialIcons} />
     </Container>
   );
 }
