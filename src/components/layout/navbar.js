@@ -7,7 +7,7 @@ function Navbar() {
     <NavContainer>
       <NavLink to="/" title="home" />
       <NavLink to="/projects" title="projects" />
-      <NavLink to="/about" title="about me" />
+      <NavLink to="#about" title="about me" />
       <NavLink to="/contact" title="contact" />
     </NavContainer>
   );
