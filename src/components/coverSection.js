@@ -12,7 +12,7 @@ export default function CoverSection() {
     <React.Fragment>
       <MainHeading
         heading="Matheus Gaspar"
-        subheading="Full-stack web developer"
+        subheading="Full stack web developer"
         sx={{
           my: 5,
         }}
@@ -28,8 +28,8 @@ export default function CoverSection() {
         </p>
         <p>
           This is my personal spot in the internet - you can learn more{' '}
-          <Link to="/about">about me</Link> or check what I've been{' '}
-          <Link to="/projects">working on</Link> recently.
+          <Link to="#about">about me</Link> or check what I've been{' '}
+          <Link to="#projects">working on</Link> recently.
         </p>
       </section>
     </React.Fragment>

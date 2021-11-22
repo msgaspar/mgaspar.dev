@@ -4,7 +4,7 @@ import { socialLinks } from '../utils/socialLinks';
 
 function ContactSection() {
   return (
-    <section>
+    <section id="contact" sx={{ scrollMarginTop: '100px' }}>
       <h2>Get in touch</h2>
       <p>
         Send me an email if you're looking for a developer, if you have any

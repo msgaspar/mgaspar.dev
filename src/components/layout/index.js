@@ -59,10 +59,10 @@ const Content = ({ children }) => (
       section: {
         display: 'flex',
         flexDirection: 'column',
-        my: 3,
+        my: 4,
 
         '& + section': {
-          mt: 4,
+          mt: 5,
         },
 
         h2: {

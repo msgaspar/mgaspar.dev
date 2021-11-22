@@ -6,9 +6,9 @@ function Navbar() {
   return (
     <NavContainer>
       <NavLink to="/" title="home" />
-      <NavLink to="/projects" title="projects" />
-      <NavLink to="#about" title="about me" />
-      <NavLink to="/contact" title="contact" />
+      <NavLink to="/#projects" title="projects" />
+      <NavLink to="/#about" title="about me" />
+      <NavLink to="/#contact" title="contact" />
     </NavContainer>
   );
 }
@@ -39,10 +39,6 @@ const NavLink = ({ to, title }) => (
         '&:hover': {
           color: 'text',
         },
-      },
-      '.active': {
-        color: 'text',
-        transition: 'none',
       },
     }}
   >

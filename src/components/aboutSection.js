@@ -28,20 +28,19 @@ function AboutSection() {
           }}
         >
           <p>
-            Hey, it's nice to have you here! I'm Matheus, a brazilian web
-            developer who's fascinated about how technology can make our lives
-            easier, solve annoying problems and help making the world a better
-            place. And one of the things I enjoy the most is being able to make
-            these things happen by writing code. I also love enjoying nature,
-            traveling, cooking, reading a good book and spending time with my
-            family and friends.
+            I'm Matheus, a brazilian web developer who's fascinated about how
+            technology can make our lives easier, solve annoying problems and
+            help making the world a better place. And one of the things I enjoy
+            the most is being able to make these things happen by writing code.
           </p>
           <p>
             I graduated in Civil Engineering in 2016 and earned a master's
             degree in Transportation Engineering in 2019, both at the University
             of São Paulo. During those years I dedicated myself to scientific
-            research, and soon after that I decided on a career change to work
-            with something I knew I really enjoyed - programming.
+            research, and soon after that I decided on a career change, to work
+            with something I knew I really enjoyed - programming. I also love
+            enjoying nature, traveling, cooking, reading a good book and
+            spending time with my family and friends.
           </p>
           <p>
             Currently, I'm studying for a degree in System Analysis and
