@@ -1,33 +1,39 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { navigate } from 'gatsby-link';
-import { techs } from '../utils/techIcons';
+import { AiOutlineProject } from 'react-icons/ai';
+import { techs, otherIcons } from '../utils/techIcons';
 import { Tooltip } from '../components/tooltip';
-
-const typeColors = {
-  trybe: 'green',
-  personal: 'orange',
-};
 
 function ProjectCard({
   title,
   description,
   slug = '',
   type,
+  icon,
   inProgress = false,
   techsList = [],
   ...props
 }) {
   return (
     <CardContainer {...props} onClick={() => navigate(`/projects/${slug}`)}>
+      <span
+        sx={{
+          fontSize: 5,
+          textAlign: 'left',
+          mb: 2,
+        }}
+      >
+        {icon ? otherIcons[icon] : <AiOutlineProject />}
+      </span>
       <CardTitle title={title} />
       <CardDescription text={description} />
-      {type ? (
+      {/* {type ? (
         <Badge text={`${type} project`} color={typeColors[type]} />
       ) : null}
       {inProgress ? (
         <Badge text="work in progress" color="purple" sx={{ mt: 1 }} />
-      ) : null}
+      ) : null} */}
       <TechIconsList techsList={techsList} />
     </CardContainer>
   );
@@ -46,6 +52,7 @@ const CardContainer = ({ children, ...props }) => (
       flex: 1,
       bg: 'offset',
       m: 1,
+      mb: 2,
       p: 4,
       pb: 3,
       borderRadius: '8px',
@@ -82,30 +89,31 @@ const CardDescription = ({ text }) => (
       fontFamily: 'body',
       textAlign: 'left',
       fontSize: 1,
+      lineHeight: 1.4,
     }}
   >
     {text}
   </p>
 );
 
-const Badge = ({ text, color, ...props }) => (
-  <p
-    sx={{
-      color: `badges.${color}.color`,
-      bg: `badges.${color}.bg`,
-      width: 'fit-content',
-      px: 2,
-      py: 1,
-      borderRadius: '8px',
-      fontSize: 0,
-      m: 0,
-      fontFamily: 'body',
-    }}
-    {...props}
-  >
-    {text}
-  </p>
-);
+// const Badge = ({ text, color, ...props }) => (
+//   <p
+//     sx={{
+//       color: `badges.${color}.color`,
+//       bg: `badges.${color}.bg`,
+//       width: 'fit-content',
+//       px: 2,
+//       py: 1,
+//       borderRadius: '8px',
+//       fontSize: 0,
+//       m: 0,
+//       fontFamily: 'body',
+//     }}
+//     {...props}
+//   >
+//     {text}
+//   </p>
+// );
 
 const TechIconsList = ({ techsList }) => (
   <div

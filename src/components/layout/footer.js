@@ -1,18 +1,23 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import '@reach/tooltip/styles.css';
 
-function Footer() {
+import React from 'react';
+import { SocialIconsBar } from './socialIconsBar';
+
+function Footer({ showSocialIcons }) {
   return (
-    <footer
-      sx={{
-        color: 'muted',
-      }}
-    >
-      <p>
-        designed and built by <strong>matheus</strong>
-      </p>
-    </footer>
+    <React.Fragment>
+      {showSocialIcons ? <SocialIconsBar /> : null}
+      <footer
+        sx={{
+          color: 'muted',
+        }}
+      >
+        <p>
+          designed and built by <strong>matheus</strong>
+        </p>
+      </footer>
+    </React.Fragment>
   );
 }
 

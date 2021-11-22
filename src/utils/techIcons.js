@@ -9,11 +9,19 @@ import {
   SiGatsby,
   SiRedux,
   SiGit,
+  SiBootstrap,
 } from 'react-icons/si';
 import { FiDatabase } from 'react-icons/fi';
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import { AiOutlineFundProjectionScreen, AiOutlineTeam } from 'react-icons/ai';
+import { BiFootball } from 'react-icons/bi';
+import { MdRestaurantMenu, MdContactPage, MdQuiz } from 'react-icons/md';
 
 const techs = {
+  bootstrap: {
+    description: 'Bootstrap',
+    color: '#7952B3',
+    icon: <SiBootstrap />,
+  },
   database: {
     color: 'muted',
     icon: <FiDatabase />,
@@ -28,6 +36,11 @@ const techs = {
     color: '#F05032',
     icon: <SiGit />,
   },
+  group: {
+    description: 'Group project',
+    color: 'text',
+    icon: <AiOutlineTeam />,
+  },
   javascript: {
     description: 'JavaScript',
     color: '#F7DF1E',
@@ -35,7 +48,7 @@ const techs = {
   },
   nextjs: {
     description: 'Next.js',
-    color: '#000000',
+    color: 'text',
     icon: <SiNextdotjs />,
   },
   nodejs: {
@@ -69,4 +82,11 @@ const techs = {
   },
 };
 
-export { techs };
+const otherIcons = {
+  football: <BiFootball />,
+  quiz: <MdQuiz />,
+  restaurant: <MdRestaurantMenu />,
+  portfolio: <MdContactPage />,
+};
+
+export { techs, otherIcons };

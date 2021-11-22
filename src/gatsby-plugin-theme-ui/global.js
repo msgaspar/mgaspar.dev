@@ -1,4 +1,5 @@
 const globalStyles = {
+  scrollBehavior: 'smooth',
   overflowY: 'scroll',
   height: '100%',
   fontFamily: 'body',

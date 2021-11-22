@@ -5,7 +5,7 @@ import { Footer } from './footer';
 import { Header } from './header';
 import favicon from '../../images/favicon.ico';
 
-function Layout({ children }) {
+function Layout({ showSocialIcons, children }) {
   return (
     <Container>
       <Helmet>
@@ -16,7 +16,7 @@ function Layout({ children }) {
       <BodyLayout>
         <Content>{children}</Content>
       </BodyLayout>
-      <Footer />
+      <Footer showSocialIcons={showSocialIcons} />
     </Container>
   );
 }
@@ -59,10 +59,10 @@ const Content = ({ children }) => (
       section: {
         display: 'flex',
         flexDirection: 'column',
-        my: 3,
+        my: 4,
 
         '& + section': {
-          mt: 4,
+          mt: 5,
         },
 
         h2: {
