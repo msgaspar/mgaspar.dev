@@ -35,6 +35,10 @@ export default function Template({ data }) {
             lineHeight: 1.6,
           },
 
+          li: {
+            marginBottom: '6px',
+          },
+
           '.gatsby-resp-image-wrapper': {
             my: '4',
           },

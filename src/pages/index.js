@@ -38,6 +38,13 @@ const IndexPage = () => {
             inProgress
           />
           <ProjectCard
+            title="Blogs API"
+            slug="blogs-api"
+            icon="pencil"
+            description="A REST API for managing blog posts, users, and categories."
+            techsList={['javascript', 'nodejs', 'mysql', 'sequelize']}
+          />
+          <ProjectCard
             title="Recipes App"
             slug="recipes-app"
             icon="restaurant"

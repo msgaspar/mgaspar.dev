@@ -10,10 +10,12 @@ import {
   SiRedux,
   SiGit,
   SiBootstrap,
+  SiSequelize,
+  SiMysql,
 } from 'react-icons/si';
 import { FiDatabase } from 'react-icons/fi';
 import { AiOutlineFundProjectionScreen, AiOutlineTeam } from 'react-icons/ai';
-import { BiFootball } from 'react-icons/bi';
+import { BiFootball, BiPencil } from 'react-icons/bi';
 import { MdRestaurantMenu, MdContactPage, MdQuiz } from 'react-icons/md';
 
 const techs = {
@@ -46,6 +48,11 @@ const techs = {
     color: '#F7DF1E',
     icon: <SiJavascript />,
   },
+  mysql: {
+    description: 'MySQL',
+    color: '#4479A1',
+    icon: <SiMysql />,
+  },
   nextjs: {
     description: 'Next.js',
     color: 'text',
@@ -75,6 +82,11 @@ const techs = {
     color: '#764ABC',
     icon: <SiRedux />,
   },
+  sequelize: {
+    description: 'Sequelize',
+    color: '#52B0E7',
+    icon: <SiSequelize />,
+  },
   typescript: {
     description: 'TypeScript',
     color: '#3178C6',
@@ -86,6 +98,7 @@ const otherIcons = {
   football: <BiFootball />,
   quiz: <MdQuiz />,
   restaurant: <MdRestaurantMenu />,
+  pencil: <BiPencil />,
   portfolio: <MdContactPage />,
 };
 
