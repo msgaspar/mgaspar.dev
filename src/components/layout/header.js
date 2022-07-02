@@ -19,7 +19,7 @@ const HeaderLayout = props => (
     {...props}
     sx={{
       position: 'sticky',
-      top: '0',
+      top: '-1px',
       bg: 'background',
       display: 'flex',
       justifyContent: 'center',

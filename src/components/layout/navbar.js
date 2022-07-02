@@ -6,9 +6,9 @@ function Navbar() {
   return (
     <NavContainer>
       <NavLink to="/" title="home" />
-      <NavLink to="/#projects" title="projects" />
+      <NavLink to="/#projects" title="work" />
       <NavLink to="/#about" title="about me" />
-      <NavLink to="/#contact" title="contact" />
+      {/* <NavLink to="/#contact" title="contact" /> */}
     </NavContainer>
   );
 }
@@ -19,7 +19,7 @@ const NavContainer = props => (
     sx={{
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-between',
+      gap: '1rem',
       width: '300px',
     }}
   />

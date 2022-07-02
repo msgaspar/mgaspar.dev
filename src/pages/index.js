@@ -19,15 +19,29 @@ const IndexPage = () => {
       <CoverSection />
 
       <section id="projects" sx={{ scrollMarginTop: '100px' }}>
-        <h2>Projects</h2>
+        <h2>Work and projects</h2>
         <div
           sx={{
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-between',
             w: '100%',
           }}
         >
+          <ProjectCard
+            title="Celebrar"
+            icon="work"
+            slug="celebrar"
+            description="My work at Celebrar as a junior full-stack developer."
+            techsList={[
+              'javascript',
+              'react',
+              'nodejs',
+              'mysql',
+              'php',
+              'laravel',
+            ]}
+            inProgress
+          />
           <ProjectCard
             title="Zé Firula"
             icon="football"
@@ -58,18 +72,12 @@ const IndexPage = () => {
             description="A trivia game front-end app built on top of the Open Trivia DB API."
             techsList={['javascript', 'react', 'redux', 'group']}
           />
-          {/* <ProjectCard
-            title="mgaspar.dev"
-            slug="portfolio"
-            icon="portfolio"
-            description="This very website you are visiting right now."
-            techsList={['javascript', 'react', 'gatsby']}
-          /> */}
         </div>
       </section>
       <AboutSection />
       <SkillsSection />
-      <ContactSection />
+
+      {/* <ContactSection /> */}
     </Layout>
   );
 };

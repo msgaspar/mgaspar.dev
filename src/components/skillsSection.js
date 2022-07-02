@@ -19,7 +19,7 @@ function SkillsSection() {
           programming, unit testing with Jest
         </SkillsListItem>
         <SkillsListItem iconName="react">
-          <strong>React</strong> - Hooks, Context API, state management with
+          <strong>React</strong> - Hooks, state management with Context API and
           Redux, Jamstack (with Next.js and Gatsby), CSS-in-JS frameworks
           (Emotion and Styled Components), testing with React Testing Library
         </SkillsListItem>
@@ -29,13 +29,23 @@ function SkillsSection() {
         </SkillsListItem>
         <SkillsListItem iconName="nodejs">
           <strong>Node.js</strong> - REST APIs with Express, JWT authentication,
-          software architecture and SOLID principles
+          Sequelize ORM, software architecture and SOLID principles
         </SkillsListItem>
         <SkillsListItem iconName="project">
           <strong>Organisational and communication skills</strong> - project
           planning and management, agile methodologies, breaking big tasks into
           achievable pieces, clear and assertive communication (written and
           verbal)
+        </SkillsListItem>
+        <SkillsListItem iconName="other">
+          <strong>Other</strong> - Linux system administration, data science
+          fundamentals and web scraping with Python, basic knowledge of PHP
+          (Laravel framework) and Java languages.
+        </SkillsListItem>
+        <SkillsListItem iconName="ideas">
+          <strong>Interests</strong> - Right now I'm trying to spend some time
+          to improve my back-end skills, studying Go language, concurrency,
+          microservices and cloud infrastructure.
         </SkillsListItem>
       </SkillsList>
     </section>

@@ -6,6 +6,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { Link } from 'gatsby';
 import { TrybeLink } from '../components/trybeLink';
+import { CelebrarLink } from './celebrarLink';
 
 export default function CoverSection() {
   return (
@@ -20,11 +21,11 @@ export default function CoverSection() {
 
       <section sx={{ mb: 4 }}>
         <p>
-          I'm a 29-year-old engineer from Brazil, taking the first steps in my
+          I'm a 30-year-old engineer from Brazil, taking the first steps in my
           career as a <strong>software developer</strong>. Currently, I'm
-          studying front and back-end web development at the awesome school{' '}
-          <TrybeLink />, with focus on <strong>JavaScript</strong>,{' '}
-          <strong>React</strong> and <strong>Node.js</strong>.
+          working as a full stack developer at <CelebrarLink />, with focus on{' '}
+          <strong>JavaScript</strong>, <strong>React</strong> and{' '}
+          <strong>Node.js</strong>.
         </p>
         <p>
           This is my personal spot in the internet - you can learn more{' '}
