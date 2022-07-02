@@ -19,8 +19,8 @@ const NavContainer = props => (
     sx={{
       display: 'flex',
       alignItems: 'center',
-      gap: '1rem',
-      width: '300px',
+      gap: '1.5rem',
+      width: '100%',
     }}
   />
 );

@@ -27,10 +27,10 @@ const Container = ({ children }) => (
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      width: 'fit-content',
       minHeight: '100%',
       backgroundColor: 'background',
-      mx: 'auto',
+      px: [0, 0, 0, 5],
+      mx: [4, '2rem', '3rem', 'auto'],
     }}
   >
     {children}
@@ -43,8 +43,7 @@ const BodyLayout = ({ children }) => (
       flexGrow: 1,
       display: 'flex',
       justifyContent: 'center',
-      width: t => t.breakpoints[1],
-      mx: t => t.space[6],
+      maxWidth: t => t.breakpoints[2],
     }}
   >
     {children}
@@ -62,7 +61,7 @@ const Content = ({ children }) => (
         my: 4,
 
         '& + section': {
-          mt: 5,
+          mt: 4,
         },
 
         h2: {

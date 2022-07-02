@@ -11,6 +11,7 @@ function Footer({ showSocialIcons }) {
       <footer
         sx={{
           color: 'muted',
+          mb: 4,
         }}
       >
         <p>

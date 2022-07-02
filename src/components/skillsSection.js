@@ -55,6 +55,7 @@ function SkillsSection() {
 const SkillsList = ({ children }) => (
   <ul
     sx={{
+      pl: [3, 4],
       li: { listStyleType: 'none' },
       'div + div': {
         pt: 3,

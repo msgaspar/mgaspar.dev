@@ -2,7 +2,7 @@ import { colors, darkModeColors } from './colors';
 import { globalStyles } from './global';
 
 const theme = {
-  breakpoints: ['640px', '768px', '1024px', '1280px'],
+  breakpoints: ['480px', '640px', '768px', '1024px', '1280px'],
   colors: {
     ...colors,
     modes: {

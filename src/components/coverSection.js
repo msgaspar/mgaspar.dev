@@ -15,11 +15,11 @@ export default function CoverSection() {
         heading="Matheus Gaspar"
         subheading="Full stack web developer"
         sx={{
-          my: 5,
+          my: [2, 2, 5],
         }}
       />
 
-      <section sx={{ mb: 4 }}>
+      <section sx={{ mb: [0, 4] }}>
         <p>
           I'm a 30-year-old engineer from Brazil, taking the first steps in my
           career as a <strong>software developer</strong>. Currently, I'm
@@ -44,7 +44,9 @@ const MainHeading = ({ heading, subheading, ...props }) => (
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'flex-start',
-      pr: 5,
+      flexWrap: 'wrap-reverse',
+      gap: [4, 4, '3rem'],
+      pr: 4,
     }}
   >
     <div>
@@ -55,6 +57,8 @@ const MainHeading = ({ heading, subheading, ...props }) => (
           letterSpacing: -1,
           fontSize: 7,
           m: 0,
+          lineHeight: [1, 1.3],
+          mb: [3, 0],
         }}
       >
         {heading}
@@ -65,6 +69,7 @@ const MainHeading = ({ heading, subheading, ...props }) => (
           fontFamily: 'body',
           fontWeight: 'light',
           fontSize: 4,
+          mb: [2, 2, '3rem'],
         }}
       >
         {subheading}

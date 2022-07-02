@@ -5,9 +5,10 @@ date: '2022-07-02'
 icon: 'work'
 ---
 
-![My work at Celebrar](./images/celebrar1.jpg)
 
 Celebrar means "to celebrate" in portuguese, and is a startup that connects big corporations with event service providers of all kinds, especially small businesses and individuals that offer high-quality services but hardly have access to opportunities at most corporate events. That happens mostly because of the contrast between the bureaucracy inside big companies and the high level of informality of the market in which these people are used to operate, and Celebrar aims to use technology to establish a connection between these two.
+
+![My work at Celebrar](./images/celebrar1.jpg)
 
 I got hired in January 2022 as a junior full-stack developer, my first work experience in software development, and I've been learning a lot since them. In short, my job as part of the tech team is to maintain, fix bugs and implement new features in two web applications. The first one is the app that is used by event service providers to receive job opportunities, send their offers, manage their sales and submit invoices. This app is composed of a Node.js back-end and a React front-end, and a MySQL database. The other app is the one that is used by the operations team to manage sales, orders, send job opportunities, and this one is built with PHP and the Laravel framework (techs that I had never worked with before, and that I'm trying to catch up quickly).
 

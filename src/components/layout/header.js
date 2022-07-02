@@ -23,10 +23,11 @@ const HeaderLayout = props => (
       bg: 'background',
       display: 'flex',
       justifyContent: 'center',
-      width: '100%',
+      width: '95vw',
       flexShrink: 0,
       height: '100px',
       zIndex: 10,
+      px: [4, 4, 4, '3rem', 5],
     }}
   />
 );
@@ -38,7 +39,8 @@ const HeaderContainer = props => (
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      width: t => t.breakpoints[1],
+      width: '100%',
+      maxWidth: t => t.breakpoints[2],
     }}
   />
 );

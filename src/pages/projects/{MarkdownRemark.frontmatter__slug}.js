@@ -33,6 +33,7 @@ export default function Template({ data }) {
 
           p: {
             lineHeight: 1.6,
+            my: 4,
           },
 
           li: {
@@ -40,7 +41,10 @@ export default function Template({ data }) {
           },
 
           '.gatsby-resp-image-wrapper': {
-            my: '4',
+            my: '3rem',
+            borderRadius: '8px',
+            overflow: 'hidden',
+            width: '680px',
           },
         }}
       >

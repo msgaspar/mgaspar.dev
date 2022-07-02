@@ -2,6 +2,7 @@ const globalStyles = {
   scrollBehavior: 'smooth',
   overflowY: 'scroll',
   height: '100%',
+  fontSize: ['14px', '16px', '16px', '16px'],
   fontFamily: 'body',
   'body, #___gatsby, #gatsby-focus-wrapper': {
     height: '100%',

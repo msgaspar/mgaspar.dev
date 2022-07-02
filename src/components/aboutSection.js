@@ -13,6 +13,7 @@ function AboutSection() {
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
+          flexWrap: 'wrap-reverse',
           alignItems: 'flex-start',
         }}
       >
@@ -25,6 +26,8 @@ function AboutSection() {
               strong: {
                 fontWeight: 'semi',
               },
+              maxWidth: '520px',
+              mr: [0, 0, 4],
             },
           }}
         >
@@ -55,18 +58,25 @@ function AboutSection() {
             reading a good book and spending time with my family and friends.
           </p>
         </div>
-        <StaticImage
-          src="../images/matheus.jpg"
-          height={300}
-          placeholder="blurred"
+        <div
           sx={{
-            borderRadius: '8px',
             flexShrink: 0,
-            ml: 5,
+            alignSelf: 'start',
             mr: -5,
-            mt: 4,
           }}
-        />
+        >
+          <StaticImage
+            src="../images/matheus.jpg"
+            height={300}
+            placeholder="blurred"
+            sx={{
+              mr: 4,
+              mt: [1, 1, 1, 5],
+              mb: [3],
+              borderRadius: '8px',
+            }}
+          />
+        </div>
       </div>
     </section>
   );

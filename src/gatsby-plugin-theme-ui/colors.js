@@ -6,7 +6,7 @@ module.exports = {
     trybe: '#018353',
     link: '#f83735',
     hoverLink: '#DD6B20',
-    offset: '#FAFAFA',
+    offset: '#f5f5f5',
     offsetBorder: '#e4e4e7',
 
     heading: '#000',
@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   darkModeColors: {
-    background: '#171717',
+    background: '#1f1f1f',
     text: '#f8f8f2',
     muted: '#b3b3b3',
     trybe: '#00ad6d',
